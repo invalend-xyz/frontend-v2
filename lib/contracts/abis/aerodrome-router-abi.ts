@@ -2,7 +2,7 @@
 // Generated at: 2026-01-10T04:05:28.033Z
 // Source: Router.sol/Router.json
 
-export const VELODROME_ROUTER_ABI = [
+export const AERODROME_ROUTER_ABI = [
   {
     type: "constructor",
     inputs: [
@@ -1687,4 +1687,4 @@ export const VELODROME_ROUTER_ABI = [
   }
 ] as const;
 
-export const VELODROME_ROUTER_ADDRESS = "0xee6e5ba92f4371a7B482f9eBFDEF0EA02A109000";
+export const AERODROME_ROUTER_ADDRESS = "0xee6e5ba92f4371a7B482f9eBFDEF0EA02A109000";

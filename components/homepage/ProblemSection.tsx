@@ -52,8 +52,8 @@ export default function ProblemSection() {
         className="absolute inset-0 opacity-[0.002]"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(245, 200, 16, 0.15) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(245, 200, 16, 0.15) 1px, transparent 1px)
+            linear-gradient(rgba(6, 182, 212, 0.15) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(6, 182, 212, 0.15) 1px, transparent 1px)
           `,
           backgroundSize: "100px 100px",
         }}
@@ -73,7 +73,7 @@ export default function ProblemSection() {
             }}>
             DeFi leverage is
             <br />
-            <span style={{ color: "#F5C810" }}>fundamentally broken</span>
+            <span style={{ color: "#06b6d4" }}>fundamentally broken</span>
           </h2>
         </div>
 
@@ -83,7 +83,7 @@ export default function ProblemSection() {
           <div
             style={{
               background: "#1E1E1E",
-              border: "1px solid rgba(245, 200, 16, 0.15)",
+              border: "1px solid rgba(6, 182, 212, 0.15)",
               borderRadius: "8px",
               padding: "32px",
             }}>
@@ -91,12 +91,12 @@ export default function ProblemSection() {
             <div
               className="w-14 h-14 rounded-lg flex items-center justify-center mb-6"
               style={{
-                background: "rgba(245, 200, 16, 0.1)",
-                border: "1px solid rgba(245, 200, 16, 0.15)",
+                background: "rgba(6, 182, 212, 0.1)",
+                border: "1px solid rgba(6, 182, 212, 0.15)",
               }}>
               <TrendingDown
                 className="w-6 h-6"
-                style={{ color: "#F5C810" }}
+                style={{ color: "#06b6d4" }}
                 strokeWidth={1.5}
               />
             </div>
@@ -133,8 +133,8 @@ export default function ProblemSection() {
             {/* Stat */}
             <div
               style={{
-                background: "rgba(245, 200, 16, 0.1)",
-                border: "1px solid rgba(245, 200, 16, 0.15)",
+                background: "rgba(6, 182, 212, 0.1)",
+                border: "1px solid rgba(6, 182, 212, 0.15)",
                 borderRadius: "6px",
                 padding: "12px 16px",
                 display: "inline-block",
@@ -144,7 +144,7 @@ export default function ProblemSection() {
                   fontSize: "32px",
                   fontWeight: "400",
                   letterSpacing: "-1.5px",
-                  color: "#F5C810",
+                  color: "#06b6d4",
                 }}>
                 {animatedCollateral}%+
               </div>
@@ -163,7 +163,7 @@ export default function ProblemSection() {
           <div
             style={{
               background: "#1E1E1E",
-              border: "1px solid rgba(245, 200, 16, 0.15)",
+              border: "1px solid rgba(6, 182, 212, 0.15)",
               borderRadius: "8px",
               padding: "32px",
             }}>
@@ -171,12 +171,12 @@ export default function ProblemSection() {
             <div
               className="w-14 h-14 rounded-lg flex items-center justify-center mb-6"
               style={{
-                background: "rgba(245, 200, 16, 0.1)",
-                border: "1px solid rgba(245, 200, 16, 0.15)",
+                background: "rgba(6, 182, 212, 0.1)",
+                border: "1px solid rgba(6, 182, 212, 0.15)",
               }}>
               <AlertCircle
                 className="w-6 h-6"
-                style={{ color: "#F5C810" }}
+                style={{ color: "#06b6d4" }}
                 strokeWidth={1.5}
               />
             </div>
@@ -212,8 +212,8 @@ export default function ProblemSection() {
             {/* Stat */}
             <div
               style={{
-                background: "rgba(245, 200, 16, 0.1)",
-                border: "1px solid rgba(245, 200, 16, 0.15)",
+                background: "rgba(6, 182, 212, 0.1)",
+                border: "1px solid rgba(6, 182, 212, 0.15)",
                 borderRadius: "6px",
                 padding: "12px 16px",
                 display: "inline-block",
@@ -223,7 +223,7 @@ export default function ProblemSection() {
                   fontSize: "32px",
                   fontWeight: "400",
                   letterSpacing: "-1.5px",
-                  color: "#F5C810",
+                  color: "#06b6d4",
                 }}>
                 {animatedYield}-5%
               </div>
@@ -242,7 +242,7 @@ export default function ProblemSection() {
           <div
             style={{
               background: "#1E1E1E",
-              border: "1px solid rgba(245, 200, 16, 0.15)",
+              border: "1px solid rgba(6, 182, 212, 0.15)",
               borderRadius: "8px",
               padding: "32px",
             }}>
@@ -250,12 +250,12 @@ export default function ProblemSection() {
             <div
               className="w-14 h-14 rounded-lg flex items-center justify-center mb-6"
               style={{
-                background: "rgba(245, 200, 16, 0.1)",
-                border: "1px solid rgba(245, 200, 16, 0.15)",
+                background: "rgba(6, 182, 212, 0.1)",
+                border: "1px solid rgba(6, 182, 212, 0.15)",
               }}>
               <XCircle
                 className="w-6 h-6"
-                style={{ color: "#F5C810" }}
+                style={{ color: "#06b6d4" }}
                 strokeWidth={1.5}
               />
             </div>
@@ -291,8 +291,8 @@ export default function ProblemSection() {
             {/* Stat */}
             <div
               style={{
-                background: "rgba(245, 200, 16, 0.1)",
-                border: "1px solid rgba(245, 200, 16, 0.15)",
+                background: "rgba(6, 182, 212, 0.1)",
+                border: "1px solid rgba(6, 182, 212, 0.15)",
                 borderRadius: "6px",
                 padding: "12px 16px",
                 display: "inline-block",
@@ -302,7 +302,7 @@ export default function ProblemSection() {
                   fontSize: "32px",
                   fontWeight: "400",
                   letterSpacing: "-1.5px",
-                  color: "#F5C810",
+                  color: "#06b6d4",
                 }}>
                 ${animatedLosses}M+
               </div>

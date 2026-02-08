@@ -28,7 +28,7 @@ function useCounterAnimation({
 
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       const current = Math.floor(
-        startValue + (endValue - startValue) * easeOutQuart
+        startValue + (endValue - startValue) * easeOutQuart,
       );
 
       setCount(current);
@@ -54,7 +54,7 @@ export default function HeroSection() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     const element = document.getElementById("hero-section");
@@ -89,8 +89,8 @@ export default function HeroSection() {
           className="absolute inset-0 opacity-[0.002]"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(245, 200, 16, 0.15) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(245, 200, 16, 0.15) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.15) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.15) 1px, transparent 1px)
             `,
             backgroundSize: "100px 100px",
           }}
@@ -105,16 +105,16 @@ export default function HeroSection() {
                 className="inline-flex items-center gap-2 px-3 py-1 rounded-full"
                 style={{
                   background: "#141414",
-                  border: "1px solid rgba(245, 200, 16, 0.15)",
+                  border: "1px solid rgba(6, 182, 212, 0.15)",
                 }}>
                 <div
                   className="w-2 h-2 rounded-full animate-pulse"
-                  style={{ background: "#F5C810" }}
+                  style={{ background: "#06b6d4" }}
                 />
                 <span
                   style={{
                     fontSize: "12px",
-                    color: "#F5C810",
+                    color: "#06b6d4",
                     fontWeight: "400",
                   }}>
                   Live on Lisk Sepolia Testnet
@@ -132,8 +132,8 @@ export default function HeroSection() {
                     color: "#FFFFFF",
                   }}>
                   Welcome to the{" "}
-                  <span style={{ color: "#F5C810" }}>prefunding</span> era.
-                  Leverage <span style={{ color: "#F5C810" }}>redefined</span>
+                  <span style={{ color: "#06b6d4" }}>prefunding</span> era.
+                  Leverage <span style={{ color: "#06b6d4" }}>redefined</span>
                   <br />
                 </h1>
 
@@ -156,9 +156,9 @@ export default function HeroSection() {
                   href="/app"
                   className="flex items-center gap-3 px-8 py-4 rounded-lg transition-all duration-300 group"
                   style={{
-                    background: "#F5C810",
+                    background: "#06b6d4",
                     color: "#0A0A0A",
-                    border: "1px solid #F5C810",
+                    border: "1px solid #06b6d4",
                     fontSize: "16px",
                     fontWeight: "400",
                   }}
@@ -173,24 +173,24 @@ export default function HeroSection() {
                 </Link>
 
                 <a
-                  href="https://aurelic-docs-lisk.vercel.app/"
+                  href="https://invalend-docs-lisk.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 px-8 py-4 rounded-lg transition-all duration-300 group"
                   style={{
                     background: "transparent",
                     color: "#FFFFFF",
-                    border: "1px solid rgba(245, 200, 16, 0.15)",
+                    border: "1px solid rgba(6, 182, 212, 0.15)",
                     fontSize: "16px",
                     fontWeight: "400",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.borderColor =
-                      "rgba(245, 200, 16, 0.3)";
+                      "rgba(6, 182, 212, 0.3)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.borderColor =
-                      "rgba(245, 200, 16, 0.15)";
+                      "rgba(6, 182, 212, 0.15)";
                   }}>
                   Documentation
                   <BookOpen className="w-5 h-5" />
@@ -211,7 +211,7 @@ export default function HeroSection() {
                       width: "400px",
                       height: "140px",
                       background: "#141414",
-                      border: "1px solid rgba(245, 200, 16, 0.15)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
                       borderRadius: "8px",
                     }}
                   />
@@ -222,7 +222,7 @@ export default function HeroSection() {
                     style={{
                       width: "2px",
                       height: "200px",
-                      background: "rgba(245, 200, 16, 0.15)",
+                      background: "rgba(6, 182, 212, 0.15)",
                     }}>
                     {/* Flowing particles inside */}
                     <div className="absolute inset-0 overflow-hidden">
@@ -231,7 +231,7 @@ export default function HeroSection() {
                           key={i}
                           className="absolute w-1.5 h-1.5 rounded-full left-1/2 transform -translate-x-1/2"
                           style={{
-                            background: "#F5C810",
+                            background: "#06b6d4",
                             animation: `flowUp 3s ease-in-out infinite`,
                             animationDelay: `${i * 0.5}s`,
                             opacity: 0,
@@ -248,7 +248,7 @@ export default function HeroSection() {
                       width: "350px",
                       height: "120px",
                       background: "#141414",
-                      border: "1px solid rgba(245, 200, 16, 0.15)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
                       borderRadius: "8px",
                     }}
                   />
@@ -260,7 +260,7 @@ export default function HeroSection() {
                     className="absolute bottom-40 left-8"
                     style={{
                       background: "#141414",
-                      border: "1px solid rgba(245, 200, 16, 0.15)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
                       borderRadius: "8px",
                       padding: "20px",
                       minWidth: "180px",
@@ -269,12 +269,12 @@ export default function HeroSection() {
                       <div
                         className="w-10 h-10 rounded-lg flex items-center justify-center"
                         style={{
-                          background: "rgba(245, 200, 16, 0.1)",
-                          border: "1px solid rgba(245, 200, 16, 0.15)",
+                          background: "rgba(6, 182, 212, 0.1)",
+                          border: "1px solid rgba(6, 182, 212, 0.15)",
                         }}>
                         <Users
                           className="w-5 h-5"
-                          style={{ color: "#F5C810" }}
+                          style={{ color: "#06b6d4" }}
                           strokeWidth={1.5}
                         />
                       </div>
@@ -301,12 +301,14 @@ export default function HeroSection() {
                     </div>
                     <div
                       className="mt-4 pt-4"
-                      style={{ borderTop: "1px solid rgba(245, 200, 16, 0.1)" }}>
+                      style={{
+                        borderTop: "1px solid rgba(6, 182, 212, 0.1)",
+                      }}>
                       <div
                         className="flex justify-between text-xs"
                         style={{ color: "#A3A3A3" }}>
                         <span>Earn APY</span>
-                        <span style={{ color: "#F5C810", fontWeight: "400" }}>
+                        <span style={{ color: "#06b6d4", fontWeight: "400" }}>
                           6.00%
                         </span>
                       </div>
@@ -318,7 +320,7 @@ export default function HeroSection() {
                     className="absolute top-32 right-8"
                     style={{
                       background: "#141414",
-                      border: "1px solid rgba(245, 200, 16, 0.15)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
                       borderRadius: "8px",
                       padding: "20px",
                       minWidth: "180px",
@@ -327,12 +329,12 @@ export default function HeroSection() {
                       <div
                         className="w-10 h-10 rounded-lg flex items-center justify-center"
                         style={{
-                          background: "rgba(245, 200, 16, 0.1)",
-                          border: "1px solid rgba(245, 200, 16, 0.15)",
+                          background: "rgba(6, 182, 212, 0.1)",
+                          border: "1px solid rgba(6, 182, 212, 0.15)",
                         }}>
                         <TrendingUp
                           className="w-5 h-5"
-                          style={{ color: "#F5C810" }}
+                          style={{ color: "#06b6d4" }}
                           strokeWidth={1.5}
                         />
                       </div>
@@ -359,12 +361,14 @@ export default function HeroSection() {
                     </div>
                     <div
                       className="mt-4 pt-4"
-                      style={{ borderTop: "1px solid rgba(245, 200, 16, 0.1)" }}>
+                      style={{
+                        borderTop: "1px solid rgba(6, 182, 212, 0.1)",
+                      }}>
                       <div
                         className="flex justify-between text-xs"
                         style={{ color: "#A3A3A3" }}>
                         <span>Collateral</span>
-                        <span style={{ color: "#F5C810", fontWeight: "400" }}>
+                        <span style={{ color: "#06b6d4", fontWeight: "400" }}>
                           20%
                         </span>
                       </div>
@@ -376,14 +380,14 @@ export default function HeroSection() {
                     className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                     style={{
                       background: "#141414",
-                      border: "1px solid rgba(245, 200, 16, 0.15)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
                       borderRadius: "8px",
                       padding: "12px 16px",
                     }}>
                     <div className="flex items-center gap-2">
                       <Shield
                         className="w-4 h-4"
-                        style={{ color: "#F5C810" }}
+                        style={{ color: "#06b6d4" }}
                         strokeWidth={1.5}
                       />
                       <span
@@ -404,7 +408,7 @@ export default function HeroSection() {
                 className="absolute bottom-4 right-4 flex items-center gap-6 px-6 py-4 rounded-lg"
                 style={{
                   background: "#141414",
-                  border: "1px solid rgba(245, 200, 16, 0.15)",
+                  border: "1px solid rgba(6, 182, 212, 0.15)",
                 }}>
                 <div>
                   <div
@@ -430,7 +434,7 @@ export default function HeroSection() {
                   style={{
                     width: "1px",
                     height: "32px",
-                    background: "rgba(245, 200, 16, 0.15)",
+                    background: "rgba(6, 182, 212, 0.15)",
                   }}
                 />
 

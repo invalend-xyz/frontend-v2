@@ -55,7 +55,7 @@ export const DepositForm = () => {
   };
 
   return (
-    <div className="bg-[#0A0A0A] rounded-lg p-8 border border-[rgba(245,200,16,0.15)]">
+    <div className="bg-[#0A0A0A] rounded-lg p-8 border border-cyan-500/15">
       <div className="space-y-8">
         {/* Header */}
         <div>
@@ -122,14 +122,14 @@ export const DepositForm = () => {
                 const val = e.target.value;
                 if (/^\d*\.?\d*$/.test(val) || val === "") setAmount(val);
               }}
-              className="w-full bg-[#1E1E1E] border border-[rgba(245,200,16,0.15)] rounded-lg px-4 py-3 text-white placeholder-[#A3A3A3] focus:outline-none focus:border-[#F5C810] disabled:opacity-50 transition-colors"
+              className="w-full bg-[#1E1E1E] border border-cyan-500/15 rounded-lg px-4 py-3 text-white placeholder-[#A3A3A3] focus:outline-none focus:border-[#06b6d4] disabled:opacity-50 transition-colors"
               style={{ fontFamily: "Space Grotesk" }}
             />
             <button
               type="button"
               onClick={handleMax}
               disabled={!hasBalance || isApproving || isDepositing}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-[#F5C810] hover:text-[#F5C810]/80 disabled:opacity-50 font-normal"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-[#06b6d4] hover:text-[#06b6d4]/80 disabled:opacity-50 font-normal"
               style={{ fontFamily: "Space Grotesk" }}>
               MAX
             </button>
@@ -228,15 +228,15 @@ const SuccessBox = ({
   message: string;
   subtext?: string;
 }) => (
-  <div className="bg-[#F5C810]/10 border border-[#F5C810]/30 rounded-lg p-4 space-y-1">
+  <div className="bg-[#06b6d4]/10 border border-[#06b6d4]/30 rounded-lg p-4 space-y-1">
     <p
-      className="text-sm text-[#F5C810] font-normal"
+      className="text-sm text-[#06b6d4] font-normal"
       style={{ fontFamily: "Space Grotesk" }}>
       {message}
     </p>
     {subtext && (
       <p
-        className="text-xs text-[#F5C810]/70 font-normal"
+        className="text-xs text-[#06b6d4]/70 font-normal"
         style={{ fontFamily: "Space Grotesk" }}>
         {subtext}
       </p>

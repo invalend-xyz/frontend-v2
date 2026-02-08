@@ -18,7 +18,7 @@ export const WalletStatCard: React.FC<WalletStatCardProps> = ({
 }) => {
   return (
     <div
-      className={`bg-[#1E1E1E] rounded-lg p-6 border border-[rgba(245,200,16,0.15)] ${className}`}>
+      className={`bg-[#1E1E1E] rounded-lg p-6 border border-cyan-500/15 ${className}`}>
       <div
         className="text-[#A3A3A3] text-sm mb-2 font-normal"
         style={{ fontFamily: "Space Grotesk" }}>
@@ -34,7 +34,7 @@ export const WalletStatCard: React.FC<WalletStatCardProps> = ({
       </div>
       {subValue && (
         <div
-          className="text-[#F5C810] text-xs font-normal"
+          className="text-[#06b6d4] text-xs font-normal"
           style={{ fontFamily: "Space Grotesk" }}>
           {subValue}
         </div>

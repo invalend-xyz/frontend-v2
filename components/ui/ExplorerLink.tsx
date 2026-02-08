@@ -33,7 +33,7 @@ export const ExplorerLink = ({
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center gap-1 text-[#F5C810] hover:text-[#F5C810]/80 transition-colors text-sm font-normal ${className}`}
+      className={`inline-flex items-center gap-1 text-[#06b6d4] hover:text-[#06b6d4]/80 transition-colors text-sm font-normal ${className}`}
       style={{ fontFamily: "Space Grotesk" }}>
       {children || defaultText}
       {showIcon && (

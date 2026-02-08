@@ -2,7 +2,7 @@
 // Generated at: 2026-01-10T04:05:28.034Z
 // Source: PoolFactory.sol/PoolFactory.json
 
-export const VELODROME_POOL_FACTORY_ABI = [
+export const AERODROME_POOL_FACTORY_ABI = [
   {
     type: "constructor",
     inputs: [
@@ -623,4 +623,4 @@ export const VELODROME_POOL_FACTORY_ABI = [
   }
 ] as const;
 
-export const VELODROME_POOL_FACTORY_ADDRESS = "0x740166B014F11c1E7652bE4Abb527dC4aC015706";
+export const AERODROME_POOL_FACTORY_ADDRESS = "0x740166B014F11c1E7652bE4Abb527dC4aC015706";

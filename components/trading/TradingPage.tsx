@@ -95,8 +95,8 @@ export const TradingPage: React.FC = () => {
        />
        
        {!restrictedWalletAddress ? (
-           <div className="bg-[#141414] border border-yellow-500/20 rounded-xl p-8 text-center max-w-2xl mx-auto mt-12">
-               <div className="w-16 h-16 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
+           <div className="bg-[#141414] border border-cyan-400/20 rounded-xl p-8 text-center max-w-2xl mx-auto mt-12">
+               <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
                    ⚠️
                </div>
                <h2 className="text-xl text-white mb-2" style={{fontFamily: "Space Grotesk"}}>Restricted Wallet Required</h2>
@@ -132,7 +132,7 @@ export const TradingPage: React.FC = () => {
                   />
                 <button
                   onClick={() => refetchLoanInfo()}
-                  className="px-3 py-1 bg-yellow-600/20 hover:bg-yellow-600/30 border border-yellow-500/30 rounded text-yellow-300 hover:text-yellow-200 transition-all duration-200 text-sm font-normal transform active:scale-95"
+                  className="px-3 py-1 bg-cyan-600/20 hover:bg-cyan-600/30 border border-cyan-400/30 rounded text-cyan-300 hover:text-cyan-200 transition-all duration-200 text-sm font-normal transform active:scale-95"
                   style={{ fontFamily: "Space Grotesk" }}>
                   Refresh Status
                 </button>

@@ -18,13 +18,13 @@ type LoanInfo = readonly [
   bigint, // poolFunding
   number, // startTime
   string, // restrictedWallet
-  boolean // isActive
+  boolean, // isActive
 ];
 
 // Custom hook for restricted wallet balance
 export const useRestrictedWalletBalance = (
   tokenAddress: string,
-  restrictedWalletAddress: string | null
+  restrictedWalletAddress: string | null,
 ) => {
   return useReadContract({
     address: tokenAddress as `0x${string}`,
@@ -188,12 +188,12 @@ export const useTradingHooks = () => {
     }
   };
 
-  // Execute swap function - Velodrome V2 simple interface
+  // Execute swap function - Aerodrome simple interface
   const executeSwap = async (
     tokenIn: Token,
     tokenOut: Token,
     amount: string,
-    slippagePercent: number = 0.5
+    slippagePercent: number = 0.5,
   ) => {
     console.log("executeSwap called with:", {
       restrictedWalletAddress,
@@ -215,19 +215,19 @@ export const useTradingHooks = () => {
 
     setCurrentStep("swap");
     setError("");
-    
+
     try {
       // Parse amount to wei based on token decimals
       const amountIn = parseUnits(amount, tokenIn.decimals);
-      
+
       // 15 minute deadline
       const deadline = BigInt(Math.floor(Date.now() / 1000) + 900);
-      
+
       // Calculate minimum output with slippage protection
       // For now using 0 - in production calculate from quote
       const amountOutMinimum = BigInt(0);
 
-      console.log("Executing Velodrome V2 swap:", {
+      console.log("Executing Aerodrome swap:", {
         tokenIn: tokenIn.address,
         tokenOut: tokenOut.address,
         amountIn: amountIn.toString(),
@@ -235,7 +235,7 @@ export const useTradingHooks = () => {
         deadline: deadline.toString(),
       });
 
-      // Execute swap through RestrictedWallet's Velodrome V2 interface
+      // Execute swap through RestrictedWallet's Aerodrome interface
       await writeContract({
         address: restrictedWalletAddress as `0x${string}`,
         abi: RESTRICTED_WALLET_ABI,
@@ -254,7 +254,6 @@ export const useTradingHooks = () => {
       throw err;
     }
   };
-
 
   // Get restricted wallet balances for tokens
   // Note: Components should use useRestrictedWalletBalance hook directly
@@ -343,13 +342,13 @@ export const useTradingHooks = () => {
 
 /**
  * Hook to get swap quote from RestrictedWallet
- * Uses Velodrome V2 on-chain quote for accurate pricing
+ * Uses Aerodrome on-chain quote for accurate pricing
  */
 export const useSwapQuote = (
   restrictedWalletAddress: string | null,
   tokenIn: string,
   tokenOut: string,
-  amountIn: bigint
+  amountIn: bigint,
 ) => {
   return useReadContract({
     address: restrictedWalletAddress as `0x${string}`,

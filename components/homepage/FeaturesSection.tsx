@@ -71,8 +71,8 @@ export default function FeaturesSection() {
         className="absolute inset-0 opacity-[0.002]"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(245, 200, 16, 0.15) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(245, 200, 16, 0.15) 1px, transparent 1px)
+            linear-gradient(rgba(6, 182, 212, 0.15) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(6, 182, 212, 0.15) 1px, transparent 1px)
           `,
           backgroundSize: "100px 100px",
         }}
@@ -92,7 +92,7 @@ export default function FeaturesSection() {
             }}>
             Six features.
             <br />
-            <span style={{ color: "#F5C810" }}>Zero trust required.</span>
+            <span style={{ color: "#06b6d4" }}>Zero trust required.</span>
           </h2>
         </div>
 
@@ -103,7 +103,7 @@ export default function FeaturesSection() {
             className="lg:col-span-6 lg:row-span-2"
             style={{
               background: "#1E1E1E",
-              border: "1px solid rgba(245, 200, 16, 0.15)",
+              border: "1px solid rgba(6, 182, 212, 0.15)",
               borderRadius: "8px",
               padding: "48px",
             }}>
@@ -111,12 +111,12 @@ export default function FeaturesSection() {
             <div
               className="w-20 h-20 rounded-lg flex items-center justify-center mb-8"
               style={{
-                background: "rgba(245, 200, 16, 0.1)",
-                border: "1px solid rgba(245, 200, 16, 0.15)",
+                background: "rgba(6, 182, 212, 0.1)",
+                border: "1px solid rgba(6, 182, 212, 0.15)",
               }}>
               <Lock
                 className="w-10 h-10"
-                style={{ color: "#F5C810" }}
+                style={{ color: "#06b6d4" }}
                 strokeWidth={1.5}
               />
             </div>
@@ -125,10 +125,10 @@ export default function FeaturesSection() {
             <div
               className="inline-block px-3 py-1 rounded-full mb-6"
               style={{
-                background: "rgba(245, 200, 16, 0.1)",
-                border: "1px solid rgba(245, 200, 16, 0.2)",
+                background: "rgba(6, 182, 212, 0.1)",
+                border: "1px solid rgba(6, 182, 212, 0.2)",
                 fontSize: "12px",
-                color: "#F5C810",
+                color: "#06b6d4",
                 fontWeight: "400",
                 textTransform: "uppercase",
                 letterSpacing: "0.5px",
@@ -178,7 +178,7 @@ export default function FeaturesSection() {
                 <div key={item} className="flex items-center gap-3">
                   <div
                     className="w-1.5 h-1.5 rounded-full"
-                    style={{ background: "#F5C810" }}
+                    style={{ background: "#06b6d4" }}
                   />
                   <span
                     style={{
@@ -203,28 +203,28 @@ export default function FeaturesSection() {
                 className="lg:col-span-6"
                 style={{
                   background: "#1E1E1E",
-                  border: "1px solid rgba(245, 200, 16, 0.15)",
+                  border: "1px solid rgba(6, 182, 212, 0.15)",
                   borderRadius: "8px",
                   padding: "32px",
                   transition: "all 0.3s ease",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(245, 200, 16, 0.3)";
+                  e.currentTarget.style.borderColor = "rgba(6, 182, 212, 0.3)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(245, 200, 16, 0.15)";
+                  e.currentTarget.style.borderColor = "rgba(6, 182, 212, 0.15)";
                 }}>
                 {/* Header with Highlight Badge */}
                 <div className="flex items-center justify-between mb-6">
                   <div
                     className="w-14 h-14 rounded-lg flex items-center justify-center"
                     style={{
-                      background: "rgba(245, 200, 16, 0.1)",
-                      border: "1px solid rgba(245, 200, 16, 0.15)",
+                      background: "rgba(6, 182, 212, 0.1)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
                     }}>
                     <Icon
                       className="w-7 h-7"
-                      style={{ color: "#F5C810" }}
+                      style={{ color: "#06b6d4" }}
                       strokeWidth={1.5}
                     />
                   </div>
@@ -232,10 +232,10 @@ export default function FeaturesSection() {
                   <div
                     className="px-2 py-1 rounded-full"
                     style={{
-                      background: "rgba(245, 200, 16, 0.1)",
-                      border: "1px solid rgba(245, 200, 16, 0.15)",
+                      background: "rgba(6, 182, 212, 0.1)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
                       fontSize: "10px",
-                      color: "#F5C810",
+                      color: "#06b6d4",
                       fontWeight: "400",
                       textTransform: "uppercase",
                       letterSpacing: "0.5px",

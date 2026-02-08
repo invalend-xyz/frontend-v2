@@ -32,8 +32,8 @@ export class ConnectionErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen bg-dark-bg flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-gray-900 rounded-lg border border-gray-700 p-6 text-center">
+        <div className="min-h-screen bg-[#0A0A0A] flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-[#141414] rounded-lg border border-cyan-500/15 p-6 text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg
                 className="w-8 h-8 text-red-400"
@@ -67,7 +67,7 @@ export class ConnectionErrorBoundary extends Component<Props, State> {
             <div className="space-y-3">
               <button
                 onClick={() => window.location.reload()}
-                className="w-full bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
                 Reload Page
               </button>
 
@@ -75,7 +75,7 @@ export class ConnectionErrorBoundary extends Component<Props, State> {
                 onClick={() =>
                   this.setState({ hasError: false, error: undefined })
                 }
-                className="w-full bg-gray-700 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                className="w-full bg-[#1E1E1E] hover:bg-[#2E2E2E] text-white font-medium py-2 px-4 rounded-lg transition-colors">
                 Try Again
               </button>
             </div>
@@ -85,7 +85,7 @@ export class ConnectionErrorBoundary extends Component<Props, State> {
                 <summary className="text-sm text-gray-400 cursor-pointer hover:text-gray-300">
                   Technical Details
                 </summary>
-                <div className="mt-2 p-3 bg-gray-800 rounded text-xs text-gray-300 font-mono overflow-auto">
+                <div className="mt-2 p-3 bg-[#1E1E1E] rounded text-xs text-gray-300 font-mono overflow-auto">
                   {this.state.error.message}
                 </div>
               </details>

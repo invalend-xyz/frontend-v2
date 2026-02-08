@@ -47,7 +47,7 @@ export const SwapCard: React.FC<SwapCardProps> = ({
   usdValueOut
 }) => {
   return (
-    <div className="bg-[#1E1E1E] border border-[rgba(245,200,16,0.15)] rounded-xl p-6 relative">
+    <div className="bg-[#1E1E1E] border border-cyan-500/15 rounded-xl p-6 relative">
       <div className="space-y-2">
         <SwapInput
           label="You Pay"
@@ -71,7 +71,7 @@ export const SwapCard: React.FC<SwapCardProps> = ({
         <div className="absolute left-1/2 top-[42%] -translate-x-1/2 -translate-y-1/2 z-10">
             <button 
                 onClick={onSwapSwitch}
-                className="bg-[#141414] border border-[rgba(245,200,16,0.3)] p-2 rounded-lg hover:bg-[#252525] hover:border-[#F5C810] transition-all text-[#F5C810] transform active:scale-95"
+                className="bg-[#141414] border border-cyan-500/30 p-2 rounded-lg hover:bg-[#252525] hover:border-[#06b6d4] transition-all text-[#06b6d4] transform active:scale-95"
             >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 5V19M12 19L6 13M12 19L18 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -100,7 +100,7 @@ export const SwapCard: React.FC<SwapCardProps> = ({
                        <button
                           key={val}
                           onClick={() => setSlippage(val)}
-                          className={`px-2 py-1 rounded text-xs transition-colors ${slippage === val ? "bg-[#F5C810] text-black font-bold" : "bg-[#141414] text-[#A3A3A3] hover:text-white"}`}
+                          className={`px-2 py-1 rounded text-xs transition-colors ${slippage === val ? "bg-[#06b6d4] text-black font-bold" : "bg-[#141414] text-[#A3A3A3] hover:text-white"}`}
                         >
                            {val}%
                        </button>

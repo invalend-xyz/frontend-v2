@@ -37,7 +37,7 @@ export default function CTASection() {
           <p className="text-body-lg text-secondary max-w-[700px] mx-auto mb-12">
             Join the future of on-chain credit. Whether you&apos;re an
             institution seeking capital efficiency or an LP looking for yield,
-            Aurelic provides the infrastructure.
+            Invalend provides the infrastructure.
           </p>
 
           {/* CTA Buttons */}
@@ -46,7 +46,7 @@ export default function CTASection() {
               Launch App
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <a href="https://aurelic-docs-lisk.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn-secondary btn-lg">
+            <a href="https://invalend-docs-lisk.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn-secondary btn-lg">
               Read Documentation
               <BookOpen className="w-5 h-5" />
             </a>

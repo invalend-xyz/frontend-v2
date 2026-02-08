@@ -59,7 +59,7 @@ export default function ArchitectureOverview() {
       icon: Zap,
       description: "Whitelisted protocol execution",
       components: [
-        "Velodrome Integration",
+        "Aerodrome Integration",
         "Token Whitelist",
         "Swap Execution",
         "Slippage Protection",
@@ -84,8 +84,8 @@ export default function ArchitectureOverview() {
         className="absolute inset-0 opacity-[0.002]"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(245, 200, 16, 0.15) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(245, 200, 16, 0.15) 1px, transparent 1px)
+            linear-gradient(rgba(6, 182, 212, 0.15) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(6, 182, 212, 0.15) 1px, transparent 1px)
           `,
           backgroundSize: "100px 100px",
         }}
@@ -105,7 +105,7 @@ export default function ArchitectureOverview() {
             }}>
             Trustless by design.
             <br />
-            <span style={{ color: "#F5C810" }}>Protected by code</span>
+            <span style={{ color: "#06b6d4" }}>Protected by code</span>
           </h2>
         </div>
 
@@ -121,7 +121,7 @@ export default function ArchitectureOverview() {
           {/* Vertical Flow Lines */}
           <div
             className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full rounded-full"
-            style={{ background: "rgba(245, 200, 16, 0.15)" }}
+            style={{ background: "rgba(6, 182, 212, 0.15)" }}
           />
 
           {/* Layer Cards */}
@@ -146,7 +146,7 @@ export default function ArchitectureOverview() {
                   {index < layers.length - 1 && (
                     <div
                       className="absolute left-1/2 top-full transform -translate-x-1/2 w-1 h-8"
-                      style={{ background: "rgba(245, 200, 16, 0.15)" }}
+                      style={{ background: "rgba(6, 182, 212, 0.15)" }}
                     />
                   )}
 
@@ -155,29 +155,29 @@ export default function ArchitectureOverview() {
                     className="relative mx-auto max-w-4xl transition-all duration-300"
                     style={{
                       background: "#141414",
-                      border: "1px solid rgba(245, 200, 16, 0.15)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
                       borderRadius: "8px",
                       padding: "48px",
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.borderColor =
-                        "rgba(245, 200, 16, 0.3)";
+                        "rgba(6, 182, 212, 0.3)";
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.borderColor =
-                        "rgba(245, 200, 16, 0.15)";
+                        "rgba(6, 182, 212, 0.15)";
                     }}>
                     <div className="flex items-center justify-between mb-8">
                       <div className="flex items-center space-x-6">
                         <div
                           className="p-4 rounded-lg flex items-center justify-center"
                           style={{
-                            background: "rgba(245, 200, 16, 0.1)",
-                            border: "1px solid rgba(245, 200, 16, 0.15)",
+                            background: "rgba(6, 182, 212, 0.1)",
+                            border: "1px solid rgba(6, 182, 212, 0.15)",
                           }}>
                           <IconComponent
                             className="w-8 h-8"
-                            style={{ color: "#F5C810" }}
+                            style={{ color: "#06b6d4" }}
                             strokeWidth={1.5}
                           />
                         </div>
@@ -210,10 +210,10 @@ export default function ArchitectureOverview() {
                         <div
                           className="px-3 py-1 rounded-full"
                           style={{
-                            background: "rgba(245, 200, 16, 0.1)",
-                            border: "1px solid rgba(245, 200, 16, 0.15)",
+                            background: "rgba(6, 182, 212, 0.1)",
+                            border: "1px solid rgba(6, 182, 212, 0.15)",
                             fontSize: "10px",
-                            color: "#F5C810",
+                            color: "#06b6d4",
                             fontWeight: "400",
                             textTransform: "uppercase",
                             letterSpacing: "0.5px",
@@ -223,9 +223,9 @@ export default function ArchitectureOverview() {
                         <div
                           className="w-12 h-12 rounded-full flex items-center justify-center"
                           style={{
-                            background: "rgba(245, 200, 16, 0.1)",
-                            border: "1px solid rgba(245, 200, 16, 0.15)",
-                            color: "#F5C810",
+                            background: "rgba(6, 182, 212, 0.1)",
+                            border: "1px solid rgba(6, 182, 212, 0.15)",
+                            color: "#06b6d4",
                             fontSize: "16px",
                             fontWeight: "400",
                           }}>
@@ -246,7 +246,7 @@ export default function ArchitectureOverview() {
                           }`}
                           style={{
                             background: "#1E1E1E",
-                            border: "1px solid rgba(245, 200, 16, 0.1)",
+                            border: "1px solid rgba(6, 182, 212, 0.1)",
                             transition: `all 0.4s ease-out ${
                               delay + 0.1 + compIndex * 0.1
                             }s`,
@@ -256,15 +256,15 @@ export default function ArchitectureOverview() {
                           }}
                           onMouseEnter={(e) => {
                             e.currentTarget.style.borderColor =
-                              "rgba(245, 200, 16, 0.3)";
+                              "rgba(6, 182, 212, 0.3)";
                           }}
                           onMouseLeave={(e) => {
                             e.currentTarget.style.borderColor =
-                              "rgba(245, 200, 16, 0.1)";
+                              "rgba(6, 182, 212, 0.1)";
                           }}>
                           <CheckCircle
                             className="w-4 h-4 flex-shrink-0"
-                            style={{ color: "#F5C810" }}
+                            style={{ color: "#06b6d4" }}
                           />
                           <span
                             className="text-sm font-medium"
@@ -288,23 +288,23 @@ export default function ArchitectureOverview() {
               className="text-center p-8 rounded-lg transition-all duration-300"
               style={{
                 background: "#141414",
-                border: "1px solid rgba(245, 200, 16, 0.15)",
+                border: "1px solid rgba(6, 182, 212, 0.15)",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "rgba(245, 200, 16, 0.3)";
+                e.currentTarget.style.borderColor = "rgba(6, 182, 212, 0.3)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "rgba(245, 200, 16, 0.15)";
+                e.currentTarget.style.borderColor = "rgba(6, 182, 212, 0.15)";
               }}>
               <div
                 className="w-16 h-16 mx-auto mb-6 rounded-lg flex items-center justify-center"
                 style={{
-                  background: "rgba(245, 200, 16, 0.1)",
-                  border: "1px solid rgba(245, 200, 16, 0.15)",
+                  background: "rgba(6, 182, 212, 0.1)",
+                  border: "1px solid rgba(6, 182, 212, 0.15)",
                 }}>
                 <Layers
                   className="w-8 h-8"
-                  style={{ color: "#F5C810" }}
+                  style={{ color: "#06b6d4" }}
                   strokeWidth={1.5}
                 />
               </div>
@@ -327,7 +327,7 @@ export default function ArchitectureOverview() {
                   fontWeight: "400",
                 }}>
                 Each layer operates independently. Clear interfaces.
-                <span style={{ color: "#F5C810" }}>
+                <span style={{ color: "#06b6d4" }}>
                   No single point of failure.
                 </span>
               </p>
@@ -337,23 +337,23 @@ export default function ArchitectureOverview() {
               className="text-center p-8 rounded-lg transition-all duration-300"
               style={{
                 background: "#141414",
-                border: "1px solid rgba(245, 200, 16, 0.15)",
+                border: "1px solid rgba(6, 182, 212, 0.15)",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "rgba(245, 200, 16, 0.3)";
+                e.currentTarget.style.borderColor = "rgba(6, 182, 212, 0.3)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "rgba(245, 200, 16, 0.15)";
+                e.currentTarget.style.borderColor = "rgba(6, 182, 212, 0.15)";
               }}>
               <div
                 className="w-16 h-16 mx-auto mb-6 rounded-lg flex items-center justify-center"
                 style={{
-                  background: "rgba(245, 200, 16, 0.1)",
-                  border: "1px solid rgba(245, 200, 16, 0.15)",
+                  background: "rgba(6, 182, 212, 0.1)",
+                  border: "1px solid rgba(6, 182, 212, 0.15)",
                 }}>
                 <Shield
                   className="w-8 h-8"
-                  style={{ color: "#F5C810" }}
+                  style={{ color: "#06b6d4" }}
                   strokeWidth={1.5}
                 />
               </div>
@@ -376,7 +376,7 @@ export default function ArchitectureOverview() {
                   fontWeight: "400",
                 }}>
                 Automated risk management. Auto-liquidation at 80%.
-                <span style={{ color: "#F5C810" }}>No human intervention.</span>
+                <span style={{ color: "#06b6d4" }}>No human intervention.</span>
               </p>
             </div>
 
@@ -384,23 +384,23 @@ export default function ArchitectureOverview() {
               className="text-center p-8 rounded-lg transition-all duration-300"
               style={{
                 background: "#141414",
-                border: "1px solid rgba(245, 200, 16, 0.15)",
+                border: "1px solid rgba(6, 182, 212, 0.15)",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "rgba(245, 200, 16, 0.3)";
+                e.currentTarget.style.borderColor = "rgba(6, 182, 212, 0.3)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "rgba(245, 200, 16, 0.15)";
+                e.currentTarget.style.borderColor = "rgba(6, 182, 212, 0.15)";
               }}>
               <div
                 className="w-16 h-16 mx-auto mb-6 rounded-lg flex items-center justify-center"
                 style={{
-                  background: "rgba(245, 200, 16, 0.1)",
-                  border: "1px solid rgba(245, 200, 16, 0.15)",
+                  background: "rgba(6, 182, 212, 0.1)",
+                  border: "1px solid rgba(6, 182, 212, 0.15)",
                 }}>
                 <Zap
                   className="w-8 h-8"
-                  style={{ color: "#F5C810" }}
+                  style={{ color: "#06b6d4" }}
                   strokeWidth={1.5}
                 />
               </div>
@@ -423,7 +423,7 @@ export default function ArchitectureOverview() {
                   fontWeight: "400",
                 }}>
                 Lisk L2 optimized. Minimal gas costs.
-                <span style={{ color: "#F5C810" }}>
+                <span style={{ color: "#06b6d4" }}>
                   Institutional-grade performance.
                 </span>
               </p>

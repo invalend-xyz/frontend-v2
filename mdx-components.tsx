@@ -42,7 +42,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     a: ({ href, children }) => (
       <Link
         href={href || "#"}
-        className="text-teal-400 hover:text-teal-300 underline transition-colors">
+        className="text-cyan-400 hover:text-cyan-300 underline transition-colors">
         {children}
       </Link>
     ),
@@ -62,19 +62,19 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
 
     // Code
     code: ({ children }) => (
-      <code className="bg-gray-800 text-teal-300 px-2 py-1 rounded text-sm font-mono">
+      <code className="bg-[#1E1E1E] text-cyan-300 px-2 py-1 rounded text-sm font-mono">
         {children}
       </code>
     ),
     pre: ({ children }) => (
-      <div className="bg-gray-900 border border-gray-700 rounded-lg p-4 mb-4 overflow-x-auto">
+      <div className="bg-[#141414] border border-cyan-500/15 rounded-lg p-4 mb-4 overflow-x-auto">
         <pre className="text-gray-200 text-sm">{children}</pre>
       </div>
     ),
 
     // Blockquotes
     blockquote: ({ children }) => (
-      <blockquote className="border-l-4 border-teal-500 pl-4 py-2 bg-gray-800/50 rounded-r-lg mb-4">
+      <blockquote className="border-l-4 border-cyan-500 pl-4 py-2 bg-[#1E1E1E]/50 rounded-r-lg mb-4">
         <div className="text-gray-300 italic">{children}</div>
       </blockquote>
     ),
@@ -82,15 +82,15 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     // Tables
     table: ({ children }) => (
       <div className="overflow-x-auto mb-4">
-        <table className="min-w-full bg-gray-900 border border-gray-700 rounded-lg">
+        <table className="min-w-full bg-[#141414] border border-cyan-500/15 rounded-lg">
           {children}
         </table>
       </div>
     ),
-    thead: ({ children }) => <thead className="bg-gray-800">{children}</thead>,
+    thead: ({ children }) => <thead className="bg-[#1E1E1E]">{children}</thead>,
     tbody: ({ children }) => <tbody>{children}</tbody>,
     tr: ({ children }) => (
-      <tr className="border-b border-gray-700">{children}</tr>
+      <tr className="border-b border-cyan-500/15">{children}</tr>
     ),
     th: ({ children }) => (
       <th className="px-4 py-3 text-left text-white font-semibold">
@@ -102,23 +102,23 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
 
     // Horizontal rule
-    hr: () => <hr className="border-gray-700 my-8" />,
+    hr: () => <hr className="border-cyan-500/15 my-8" />,
 
     // Images
     img: ({ src, alt }) => (
       <img
         src={src}
         alt={alt}
-        className="max-w-full h-auto rounded-lg border border-gray-700 mb-4"
+        className="max-w-full h-auto rounded-lg border border-cyan-500/15 mb-4"
       />
     ),
 
     // Custom components
     warning: ({ children }) => (
-      <div className="bg-yellow-900/20 border border-yellow-600/30 rounded-lg p-4 mb-4">
+      <div className="bg-cyan-900/20 border border-cyan-600/30 rounded-lg p-4 mb-4">
         <div className="flex items-start gap-3">
-          <div className="text-yellow-400 text-xl">⚠️</div>
-          <div className="text-yellow-200">{children}</div>
+          <div className="text-cyan-400 text-xl">⚠️</div>
+          <div className="text-cyan-200">{children}</div>
         </div>
       </div>
     ),

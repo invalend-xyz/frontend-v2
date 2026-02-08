@@ -15,7 +15,7 @@ export default function UseCasesSection() {
       tag: "INSTITUTIONS",
       title: "Treasury Capital Revolution",
       description:
-        "DAOs with $20M+ treasuries earning 3% APY in Aave. Deploy $10M via Aurelic with $2M collateral. 5x leverage. Chain-enforced execution. Zero trust required.",
+        "DAOs with $20M+ treasuries earning 3% APY in Aave. Deploy $10M via Invalend with $2M collateral. 5x leverage. Chain-enforced execution. Zero trust required.",
       metrics: [
         { label: "ROI ACHIEVED", value: "21.5%" },
         { label: "EXECUTION TIME", value: "6 months" },
@@ -29,7 +29,7 @@ export default function UseCasesSection() {
       tag: "PROFESSIONALS",
       title: "Market Making at Scale",
       description:
-        "Independent market maker with $1M capital. Limited by traditional leverage. Access $5M total through Aurelic. 5x leverage. Self-custody maintained. Transparent execution.",
+        "Independent market maker with $1M capital. Limited by traditional leverage. Access $5M total through Invalend. 5x leverage. Self-custody maintained. Transparent execution.",
       metrics: [
         { label: "RETURN GENERATED", value: "29.5%" },
         { label: "EXECUTION TIME", value: "3 months" },
@@ -43,7 +43,7 @@ export default function UseCasesSection() {
       tag: "COMMUNITY",
       title: "Passive Yield Maximization",
       description:
-        "DeFi investor with $200K USDC earning 3% in Aave. Deposit to Aurelic vault. Earn 6% APY. Principal protected by auto-liquidation. 2x better than Aave.",
+        "DeFi investor with $200K USDC earning 3% in Aave. Deposit to Invalend vault. Earn 6% APY. Principal protected by auto-liquidation. 2x better than Aave.",
       metrics: [
         { label: "YIELD IMPROVEMENT", value: "50%" },
         { label: "APY EARNED", value: "6%" },
@@ -70,8 +70,8 @@ export default function UseCasesSection() {
         className="absolute inset-0 opacity-[0.002]"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(245, 200, 16, 0.15) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(245, 200, 16, 0.15) 1px, transparent 1px)
+            linear-gradient(rgba(6, 182, 212, 0.15) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(6, 182, 212, 0.15) 1px, transparent 1px)
           `,
           backgroundSize: "100px 100px",
         }}
@@ -91,7 +91,7 @@ export default function UseCasesSection() {
             }}>
             Real-world impact.
             <br />
-            <span style={{ color: "#F5C810" }}>Measurable results.</span>
+            <span style={{ color: "#06b6d4" }}>Measurable results.</span>
           </h2>
         </div>
 
@@ -105,28 +105,28 @@ export default function UseCasesSection() {
                 key={useCase.title}
                 style={{
                   background: "#1E1E1E",
-                  border: "1px solid rgba(245, 200, 16, 0.15)",
+                  border: "1px solid rgba(6, 182, 212, 0.15)",
                   borderRadius: "8px",
                   padding: "32px",
                   transition: "all 0.3s ease",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(245, 200, 16, 0.3)";
+                  e.currentTarget.style.borderColor = "rgba(6, 182, 212, 0.3)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(245, 200, 16, 0.15)";
+                  e.currentTarget.style.borderColor = "rgba(6, 182, 212, 0.15)";
                 }}>
                 {/* Header with Highlight Badge */}
                 <div className="flex items-center justify-between mb-8">
                   <div
                     className="w-14 h-14 rounded-lg flex items-center justify-center"
                     style={{
-                      background: "rgba(245, 200, 16, 0.1)",
-                      border: "1px solid rgba(245, 200, 16, 0.15)",
+                      background: "rgba(6, 182, 212, 0.1)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
                     }}>
                     <Icon
                       className="w-7 h-7"
-                      style={{ color: "#F5C810" }}
+                      style={{ color: "#06b6d4" }}
                       strokeWidth={1.5}
                     />
                   </div>
@@ -135,10 +135,10 @@ export default function UseCasesSection() {
                     <span
                       className="px-3 py-1 rounded-full"
                       style={{
-                        background: "rgba(245, 200, 16, 0.1)",
-                        border: "1px solid rgba(245, 200, 16, 0.15)",
+                        background: "rgba(6, 182, 212, 0.1)",
+                        border: "1px solid rgba(6, 182, 212, 0.15)",
                         fontSize: "10px",
-                        color: "#F5C810",
+                        color: "#06b6d4",
                         fontWeight: "400",
                         textTransform: "uppercase",
                         letterSpacing: "0.5px",
@@ -148,7 +148,7 @@ export default function UseCasesSection() {
                     <span
                       style={{
                         fontSize: "12px",
-                        color: "#F5C810",
+                        color: "#06b6d4",
                         fontWeight: "400",
                         textTransform: "uppercase",
                         letterSpacing: "0.5px",
@@ -186,7 +186,7 @@ export default function UseCasesSection() {
                 {/* Metrics - Enhanced */}
                 <div
                   className="grid grid-cols-2 gap-4 pt-6"
-                  style={{ borderTop: "1px solid rgba(245, 200, 16, 0.1)" }}>
+                  style={{ borderTop: "1px solid rgba(6, 182, 212, 0.1)" }}>
                   {useCase.metrics.map((metric, metricIndex) => (
                     <div key={metricIndex} className="flex flex-col gap-2">
                       <span
@@ -204,7 +204,7 @@ export default function UseCasesSection() {
                           fontSize: "20px",
                           fontWeight: "400",
                           letterSpacing: "-1px",
-                          color: "#F5C810",
+                          color: "#06b6d4",
                         }}>
                         {metric.value}
                       </span>

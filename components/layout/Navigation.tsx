@@ -9,7 +9,7 @@ interface NavigationProps {
 
 export const Navigation = ({ activeTab, onTabChange }: NavigationProps) => {
   return (
-    <nav className="bg-[#0A0A0A] border-b border-[rgba(245,200,16,0.15)]">
+    <nav className="bg-[#0A0A0A] border-b border-cyan-500/15">
       <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
         <div className="flex justify-center">
           <div className="flex items-center space-x-1">
@@ -19,7 +19,7 @@ export const Navigation = ({ activeTab, onTabChange }: NavigationProps) => {
                   onClick={() => onTabChange(item.id)}
                   className={`relative px-6 py-4 text-base font-normal transition-colors group ${
                     activeTab === item.id
-                      ? "text-[#F5C810]"
+                      ? "text-[#06b6d4]"
                       : "text-[#A3A3A3] hover:text-white"
                   }`}
                   style={{ fontFamily: "Space Grotesk" }}>
@@ -28,7 +28,7 @@ export const Navigation = ({ activeTab, onTabChange }: NavigationProps) => {
                     <span
                       className={`text-xs font-normal transition-colors ${
                         activeTab === item.id
-                          ? "text-[#F5C810]"
+                          ? "text-[#06b6d4]"
                           : "text-[#A3A3A3]"
                       }`}
                       style={{ fontFamily: "Space Grotesk" }}>
@@ -37,13 +37,13 @@ export const Navigation = ({ activeTab, onTabChange }: NavigationProps) => {
                   </div>
                   {/* Active indicator: subtle 1px border per style guide */}
                   {activeTab === item.id && (
-                    <div className="absolute inset-0 rounded-lg border border-[rgba(245,200,16,0.15)]"></div>
+                    <div className="absolute inset-0 rounded-lg border border-cyan-500/15"></div>
                   )}
                 </button>
 
                 {/* Separator */}
                 {index < navigationItems.length - 1 && (
-                  <div className="h-8 w-px bg-[rgba(245,200,16,0.15)] mx-0.5"></div>
+                  <div className="h-8 w-px bg-cyan-500/15 mx-0.5"></div>
                 )}
               </div>
             ))}

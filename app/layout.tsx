@@ -15,9 +15,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Aurelic - Community pre-funds institutional leverage",
+  title: "Invalend - Community pre-funds institutional leverage",
   description:
-    "Aurelic enables capital-efficient institutional leverage through community-backed prefunding with on-chain execution transparency.",
+    "Invalend enables capital-efficient institutional leverage through community-backed prefunding with on-chain execution transparency.",
   icons: {
     icon: "/logo-favicon.svg",
   },

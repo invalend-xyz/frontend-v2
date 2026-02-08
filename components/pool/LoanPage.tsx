@@ -16,8 +16,8 @@ export const LoanPage = () => {
   ] as const;
 
   return (
-    <div className="min-h-screen bg-dark-bg p-6">
-      <div className="w-full bg-dark-bg p-4 rounded-lg border border-gray-800/50">
+    <div className="min-h-screen bg-[#0A0A0A] p-6">
+      <div className="w-full bg-[#0A0A0A] p-4 rounded-lg border border-cyan-500/10">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="mb-8">
@@ -33,7 +33,7 @@ export const LoanPage = () => {
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-6">
               {/* Tab Navigation */}
-              <div className="bg-black rounded-lg border border-gray-700 p-1">
+              <div className="bg-black rounded-lg border border-cyan-500/15 p-1">
                 <div className="flex space-x-1">
                   {tabs.map((tab) => (
                     <button
@@ -41,8 +41,8 @@ export const LoanPage = () => {
                       onClick={() => setActiveTab(tab.id)}
                       className={`flex-1 px-4 py-3 rounded-md text-sm font-medium transition-all duration-200 ${
                         activeTab === tab.id
-                          ? "bg-teal-400 text-black"
-                          : "text-gray-400 hover:text-white hover:bg-gray-800"
+                          ? "bg-cyan-400 text-black"
+                          : "text-gray-400 hover:text-white hover:bg-[#1E1E1E]"
                       }`}>
                       <div className="text-center">
                         <div className="font-semibold">{tab.label}</div>

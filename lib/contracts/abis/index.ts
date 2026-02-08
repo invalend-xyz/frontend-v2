@@ -6,14 +6,14 @@ export * from "./mock-usdc-abi";
 export * from "./mock-eth-abi";
 export * from "./mock-btc-abi";
 
-// Aurelic Core Protocol
+// Invalend Core Protocol
 export * from "./lending-pool-abi";
 export * from "./collateral-manager-abi";
 export * from "./loan-manager-abi";
 export * from "./restricted-wallet-factory-abi";
 export * from "./restricted-wallet-abi";
 
-// Velodrome AMM
-export * from "./velodrome-router-abi";
-export * from "./velodrome-pool-factory-abi";
-export * from "./velodrome-pool-abi";
+// Aerodrome AMM
+export * from "./aerodrome-router-abi";
+export * from "./aerodrome-pool-factory-abi";
+export * from "./aerodrome-pool-abi";

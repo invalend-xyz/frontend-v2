@@ -30,7 +30,7 @@ export const SwapInput: React.FC<SwapInputProps> = ({
   error,
 }) => {
   return (
-    <div className="bg-[#141414] border border-[rgba(245,200,16,0.15)] rounded-lg p-4 transition-colors hover:border-[rgba(245,200,16,0.3)]">
+    <div className="bg-[#141414] border border-cyan-500/15 rounded-lg p-4 transition-colors hover:border-cyan-500/30">
       <div className="flex justify-between items-center mb-3">
         <label className="text-sm font-normal text-[#A3A3A3]" style={{ fontFamily: "Space Grotesk" }}>
           {label}
@@ -52,7 +52,7 @@ export const SwapInput: React.FC<SwapInputProps> = ({
            <select
               value={token?.symbol || ""}
               onChange={(e) => onSelectToken(e.target.value)}
-              className="w-full appearance-none bg-[#1E1E1E] border border-[rgba(245,200,16,0.2)] rounded-lg px-3 py-2 text-white font-medium focus:outline-none focus:border-[#F5C810] pr-8"
+              className="w-full appearance-none bg-[#1E1E1E] border border-cyan-500/20 rounded-lg px-3 py-2 text-white font-medium focus:outline-none focus:border-[#06b6d4] pr-8"
               style={{ fontFamily: "Space Grotesk" }}
            >
               {tokens.map(t => (
@@ -60,7 +60,7 @@ export const SwapInput: React.FC<SwapInputProps> = ({
               ))}
            </select>
            {/* Custom Arrow */}
-           <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-[#F5C810]">
+           <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-[#06b6d4]">
               <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
@@ -92,7 +92,7 @@ export const SwapInput: React.FC<SwapInputProps> = ({
           {onMax && !readOnly && balance !== undefined && (
               <button 
                 onClick={onMax}
-                className="text-xs font-bold text-[#F5C810] hover:text-[#FFD700] uppercase tracking-wider transform active:scale-95 transition-transform"
+                className="text-xs font-bold text-[#06b6d4] hover:text-[#22d3ee] uppercase tracking-wider transform active:scale-95 transition-transform"
               >
                   MAX
               </button>

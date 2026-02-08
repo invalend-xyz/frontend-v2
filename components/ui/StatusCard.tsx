@@ -28,7 +28,7 @@ export const StatusCard = ({
         text: "Inactive",
       },
       pending: {
-        color: "bg-yellow-400/20 text-yellow-400 border-yellow-400/30",
+        color: "bg-cyan-400/20 text-cyan-400 border-cyan-400/30",
         text: "Pending",
       },
       success: {
@@ -58,7 +58,7 @@ export const StatusCard = ({
 
   return (
     <div
-      className={`bg-[#1E1E1E] rounded-lg border border-[rgba(245,200,16,0.15)] p-4 ${className}`}>
+      className={`bg-[#1E1E1E] rounded-lg border border-cyan-500/15 p-4 ${className}`}>
       <div className="flex items-center justify-between mb-3">
         <h4
           className="text-sm font-normal text-white"
@@ -92,7 +92,7 @@ export const StatusItem = ({
       </span>
       <span
         className={`text-sm font-normal ${
-          highlight ? "text-[#F5C810]" : "text-white"
+          highlight ? "text-[#06b6d4]" : "text-white"
         }`}
         style={{ fontFamily: "Space Grotesk" }}>
         {value}

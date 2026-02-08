@@ -1,6 +1,6 @@
 # Trading Component
 
-This directory contains the trading functionality for the Aurelic DeFi protocol, implementing integration with Uniswap V3 for leveraged trading through restricted wallets.
+This directory contains the trading functionality for the Invalend DeFi protocol, implementing integration with Aerodrome for leveraged trading through restricted wallets.
 
 ## Overview
 
@@ -51,21 +51,21 @@ Custom hook that manages:
 - **USDC**: USD Coin - Primary collateral (6 decimals)
 - **WBTC**: Wrapped Bitcoin (8 decimals)
 - **LSK**: Lisk token (18 decimals) - _Newly added_
-- **UNI**: Uniswap token (18 decimals)
+- **UNI**: Aerodrome token (18 decimals)
 
 ### Trading Flow
 
 1. **Connect Wallet**: User connects their wallet to the dApp
 2. **Approve USDC**: Approve USDC spending for margin requirements (20% of position size)
 3. **Create Loan**: Create a leveraged loan through LoanManager contract
-4. **Execute Swap**: Use restricted wallet to swap tokens via Uniswap V3
+4. **Execute Swap**: Use restricted wallet to swap tokens via Aerodrome
 5. **Monitor Position**: Track gains/losses and manage position
 
 ### Security Features
 
 - **Restricted Wallet**: All trades executed through secure restricted wallet
 - **Whitelisted Tokens**: Only pre-approved tokens can be traded
-- **Function Selectors**: Only approved Uniswap functions can be called
+- **Function Selectors**: Only approved Aerodrome functions can be called
 - **Slippage Protection**: Configurable slippage tolerance (0.1% to 50%)
 
 ## Configuration
@@ -76,10 +76,10 @@ Custom hook that manages:
 - LSK: `0xac485391EB2d7D88253a7F1eF18C37f4242D1A24` (example - replace with actual)
 - Other tokens: Placeholder addresses (update with actual deployments)
 
-### Uniswap V3 Integration
+### Aerodrome Integration
 
-- Router: `0xE592427A0AEce92De3Edee1F18E0157C05861564` (example)
-- Fee Tiers: 0.05%, 0.3%, 1.0%
+- Router: Configured in contract deployment
+- Pool Types: Volatile and Stable pools
 - Default Deadline: 20 minutes
 
 ## Usage Example
@@ -103,7 +103,7 @@ export function App() {
 - `swapExactInputSingle`: Swap exact input amount for minimum output
 - `swapExactOutputSingle`: Swap for exact output using maximum input
 - `addWhitelistedToken`: Add tokens to trading whitelist
-- `addApprovedTarget`: Add Uniswap router to approved targets
+- `addApprovedTarget`: Add Aerodrome router to approved targets
 
 ### LoanManager Functions Used
 

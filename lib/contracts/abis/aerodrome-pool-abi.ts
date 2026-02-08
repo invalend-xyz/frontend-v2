@@ -2,7 +2,7 @@
 // Generated at: 2026-01-10T04:05:28.035Z
 // Source: Pool.sol/Pool.json
 
-export const VELODROME_POOL_ABI = [
+export const AERODROME_POOL_ABI = [
   {
     type: "constructor",
     inputs: [],

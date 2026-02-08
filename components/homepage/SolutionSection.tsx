@@ -51,8 +51,8 @@ export default function SolutionSection() {
         className="absolute inset-0 opacity-[0.002]"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(245, 200, 16, 0.15) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(245, 200, 16, 0.15) 1px, transparent 1px)
+            linear-gradient(rgba(6, 182, 212, 0.15) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(6, 182, 212, 0.15) 1px, transparent 1px)
           `,
           backgroundSize: "100px 100px",
         }}
@@ -72,7 +72,7 @@ export default function SolutionSection() {
             }}>
             Introducing
             <br />
-            <span style={{ color: "#F5C810" }}>prefunded leverage</span>
+            <span style={{ color: "#06b6d4" }}>prefunded leverage</span>
           </h2>
         </div>
 
@@ -84,7 +84,7 @@ export default function SolutionSection() {
             <div
               className="absolute top-20 left-0 right-0 h-0.5 hidden lg:block"
               style={{
-                background: "rgba(245, 200, 16, 0.15)",
+                background: "rgba(6, 182, 212, 0.15)",
                 zIndex: 0,
               }}
             />
@@ -95,7 +95,7 @@ export default function SolutionSection() {
               <div
                 style={{
                   background: "#141414",
-                  border: "1px solid rgba(245, 200, 16, 0.15)",
+                  border: "1px solid rgba(6, 182, 212, 0.15)",
                   borderRadius: "8px",
                   padding: "32px",
                   textAlign: "center",
@@ -103,12 +103,12 @@ export default function SolutionSection() {
                 <div
                   className="w-16 h-16 mx-auto mb-6 rounded-lg flex items-center justify-center"
                   style={{
-                    background: "rgba(245, 200, 16, 0.1)",
-                    border: "1px solid rgba(245, 200, 16, 0.15)",
+                    background: "rgba(6, 182, 212, 0.1)",
+                    border: "1px solid rgba(6, 182, 212, 0.15)",
                   }}>
                   <Users
                     className="w-8 h-8"
-                    style={{ color: "#F5C810" }}
+                    style={{ color: "#06b6d4" }}
                     strokeWidth={1.5}
                   />
                 </div>
@@ -118,7 +118,7 @@ export default function SolutionSection() {
                     fontSize: "48px",
                     fontWeight: "400",
                     letterSpacing: "-2px",
-                    color: "#F5C810",
+                    color: "#06b6d4",
                     marginBottom: "8px",
                   }}>
                   80%
@@ -152,7 +152,7 @@ export default function SolutionSection() {
               <div
                 style={{
                   background: "#141414",
-                  border: "1px solid rgba(245, 200, 16, 0.15)",
+                  border: "1px solid rgba(6, 182, 212, 0.15)",
                   borderRadius: "8px",
                   padding: "32px",
                   textAlign: "center",
@@ -160,12 +160,12 @@ export default function SolutionSection() {
                 <div
                   className="w-16 h-16 mx-auto mb-6 rounded-lg flex items-center justify-center"
                   style={{
-                    background: "rgba(245, 200, 16, 0.1)",
-                    border: "1px solid rgba(245, 200, 16, 0.15)",
+                    background: "rgba(6, 182, 212, 0.1)",
+                    border: "1px solid rgba(6, 182, 212, 0.15)",
                   }}>
                   <Shield
                     className="w-8 h-8"
-                    style={{ color: "#F5C810" }}
+                    style={{ color: "#06b6d4" }}
                     strokeWidth={1.5}
                   />
                 </div>
@@ -175,7 +175,7 @@ export default function SolutionSection() {
                     fontSize: "48px",
                     fontWeight: "400",
                     letterSpacing: "-2px",
-                    color: "#F5C810",
+                    color: "#06b6d4",
                     marginBottom: "8px",
                   }}>
                   {animatedCollateral}%
@@ -209,7 +209,7 @@ export default function SolutionSection() {
               <div
                 style={{
                   background: "#141414",
-                  border: "1px solid rgba(245, 200, 16, 0.15)",
+                  border: "1px solid rgba(6, 182, 212, 0.15)",
                   borderRadius: "8px",
                   padding: "32px",
                   textAlign: "center",
@@ -217,12 +217,12 @@ export default function SolutionSection() {
                 <div
                   className="w-16 h-16 mx-auto mb-6 rounded-lg flex items-center justify-center"
                   style={{
-                    background: "rgba(245, 200, 16, 0.1)",
-                    border: "1px solid rgba(245, 200, 16, 0.15)",
+                    background: "rgba(6, 182, 212, 0.1)",
+                    border: "1px solid rgba(6, 182, 212, 0.15)",
                   }}>
                   <TrendingUp
                     className="w-8 h-8"
-                    style={{ color: "#F5C810" }}
+                    style={{ color: "#06b6d4" }}
                     strokeWidth={1.5}
                   />
                 </div>
@@ -232,7 +232,7 @@ export default function SolutionSection() {
                     fontSize: "48px",
                     fontWeight: "400",
                     letterSpacing: "-2px",
-                    color: "#F5C810",
+                    color: "#06b6d4",
                     marginBottom: "8px",
                   }}>
                   {animatedLeverage}x
@@ -266,7 +266,7 @@ export default function SolutionSection() {
               <div
                 style={{
                   background: "#141414",
-                  border: "1px solid rgba(245, 200, 16, 0.15)",
+                  border: "1px solid rgba(6, 182, 212, 0.15)",
                   borderRadius: "8px",
                   padding: "32px",
                   textAlign: "center",
@@ -274,12 +274,12 @@ export default function SolutionSection() {
                 <div
                   className="w-16 h-16 mx-auto mb-6 rounded-lg flex items-center justify-center"
                   style={{
-                    background: "rgba(245, 200, 16, 0.1)",
-                    border: "1px solid rgba(245, 200, 16, 0.15)",
+                    background: "rgba(6, 182, 212, 0.1)",
+                    border: "1px solid rgba(6, 182, 212, 0.15)",
                   }}>
                   <Eye
                     className="w-8 h-8"
-                    style={{ color: "#F5C810" }}
+                    style={{ color: "#06b6d4" }}
                     strokeWidth={1.5}
                   />
                 </div>
@@ -289,7 +289,7 @@ export default function SolutionSection() {
                     fontSize: "48px",
                     fontWeight: "400",
                     letterSpacing: "-2px",
-                    color: "#F5C810",
+                    color: "#06b6d4",
                     marginBottom: "8px",
                   }}>
                   100%
@@ -326,7 +326,7 @@ export default function SolutionSection() {
         <div
           style={{
             background: "#141414",
-            border: "1px solid rgba(245, 200, 16, 0.15)",
+            border: "1px solid rgba(6, 182, 212, 0.15)",
             borderRadius: "8px",
             padding: "48px 32px",
           }}>
@@ -361,7 +361,7 @@ export default function SolutionSection() {
               <div
                 style={{
                   background: "#1E1E1E",
-                  border: "1px solid rgba(245, 200, 16, 0.15)",
+                  border: "1px solid rgba(6, 182, 212, 0.15)",
                   borderRadius: "8px",
                   padding: "24px",
                 }}>
@@ -370,7 +370,7 @@ export default function SolutionSection() {
                     fontSize: "56px",
                     fontWeight: "400",
                     letterSpacing: "-2px",
-                    color: "#F5C810",
+                    color: "#06b6d4",
                     marginBottom: "12px",
                   }}>
                   5x
@@ -409,7 +409,7 @@ export default function SolutionSection() {
               <div
                 style={{
                   background: "#1E1E1E",
-                  border: "1px solid rgba(245, 200, 16, 0.15)",
+                  border: "1px solid rgba(6, 182, 212, 0.15)",
                   borderRadius: "8px",
                   padding: "24px",
                 }}>
@@ -418,7 +418,7 @@ export default function SolutionSection() {
                     fontSize: "56px",
                     fontWeight: "400",
                     letterSpacing: "-2px",
-                    color: "#F5C810",
+                    color: "#06b6d4",
                     marginBottom: "12px",
                   }}>
                   100%
@@ -457,7 +457,7 @@ export default function SolutionSection() {
               <div
                 style={{
                   background: "#1E1E1E",
-                  border: "1px solid rgba(245, 200, 16, 0.15)",
+                  border: "1px solid rgba(6, 182, 212, 0.15)",
                   borderRadius: "8px",
                   padding: "24px",
                 }}>
@@ -466,7 +466,7 @@ export default function SolutionSection() {
                     fontSize: "56px",
                     fontWeight: "400",
                     letterSpacing: "-2px",
-                    color: "#F5C810",
+                    color: "#06b6d4",
                     marginBottom: "12px",
                   }}>
                   {animatedAPY}%

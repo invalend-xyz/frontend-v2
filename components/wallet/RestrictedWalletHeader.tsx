@@ -35,10 +35,10 @@ export const RestrictedWalletHeader: React.FC<RestrictedWalletHeaderProps> = ({
         loan is cleared.
       </p>
       {withdrawLocked ? (
-        <div className="mt-4 p-3 bg-yellow-900/20 border border-yellow-600/30 rounded-lg">
+        <div className="mt-4 p-3 bg-cyan-900/20 border border-cyan-600/30 rounded-lg">
           <div className="flex items-center space-x-2">
-            <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-            <p className="text-yellow-200 text-sm font-medium">
+            <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+            <p className="text-cyan-200 text-sm font-medium">
               Loan still active. Withdrawals are locked, but you can view your
               asset positions.
             </p>

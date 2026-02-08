@@ -12,12 +12,12 @@ export const PoolPage = () => {
       <div className="max-w-6xl mx-auto space-y-8">
         {/* Pool Actions */}
         <div className="space-y-6">
-          <div className="bg-[#141414] rounded-lg border border-[rgba(245,200,16,0.15)] p-0 max-w-md mx-auto">
-            <div className="flex border-b border-[rgba(245,200,16,0.15)]">
+          <div className="bg-[#141414] rounded-lg border border-cyan-500/15 p-0 max-w-md mx-auto">
+            <div className="flex border-b border-cyan-500/15">
               <button
                 className={`flex-1 py-4 text-center font-normal text-sm transition-colors rounded-tl-lg ${
                   activeTab === "deposit"
-                    ? "text-[#F5C810] border-b border-[#F5C810] bg-[#1E1E1E]"
+                    ? "text-[#06b6d4] border-b border-[#06b6d4] bg-[#1E1E1E]"
                     : "text-[#A3A3A3] hover:text-white hover:bg-[#1E1E1E]"
                 }`}
                 onClick={() => setActiveTab("deposit")}
@@ -27,7 +27,7 @@ export const PoolPage = () => {
               <button
                 className={`flex-1 py-4 text-center font-normal text-sm transition-colors rounded-tr-lg ${
                   activeTab === "withdraw"
-                    ? "text-[#F5C810] border-b border-[#F5C810] bg-[#1E1E1E]"
+                    ? "text-[#06b6d4] border-b border-[#06b6d4] bg-[#1E1E1E]"
                     : "text-[#A3A3A3] hover:text-white hover:bg-[#1E1E1E]"
                 }`}
                 onClick={() => setActiveTab("withdraw")}

@@ -12,10 +12,22 @@ export default function Footer() {
       { href: "/app", label: "Launch App" },
     ],
     resources: [
-      { href: "https://aurelic-docs-lisk.vercel.app/", label: "Documentation" },
-      { href: "https://aurelic-docs-lisk.vercel.app/docs/introduction/overview", label: "Overview" },
-      { href: "https://aurelic-docs-lisk.vercel.app/docs/core-concepts/core-principles/how-it-works", label: "Core Concepts" },
-      { href: "https://aurelic-docs-lisk.vercel.app/docs/technical-details/smart-contract-architecture/core-contracts", label: "Smart Contracts" },
+      {
+        href: "https://invalend-docs-lisk.vercel.app/",
+        label: "Documentation",
+      },
+      {
+        href: "https://invalend-docs-lisk.vercel.app/docs/introduction/overview",
+        label: "Overview",
+      },
+      {
+        href: "https://invalend-docs-lisk.vercel.app/docs/core-concepts/core-principles/how-it-works",
+        label: "Core Concepts",
+      },
+      {
+        href: "https://invalend-docs-lisk.vercel.app/docs/technical-details/smart-contract-architecture/core-contracts",
+        label: "Smart Contracts",
+      },
     ],
     community: [
       { href: "#", label: "Discord (coming soon)" },
@@ -39,12 +51,20 @@ export default function Footer() {
           <div className="lg:col-span-2 max-w-[320px]">
             <Link
               href="/"
-              className="flex items-center gap-3 mb-5 transition-opacity duration-300 hover:opacity-80">
+              className="flex items-center gap-2.5 mb-5 transition-opacity duration-300 hover:opacity-80">
               <img
-                src="/logo-text.svg"
-                alt="Aurelic"
-                className="h-8 w-auto"
+                src="/Invalend.png"
+                alt="Invalend"
+                className="w-8 h-8 rounded-lg"
               />
+              <span
+                className="text-xl font-medium text-white"
+                style={{
+                  fontFamily: "Space Grotesk",
+                  letterSpacing: "-0.5px",
+                }}>
+                Invalend
+              </span>
             </Link>
             <p className="text-small text-tertiary leading-relaxed mb-8">
               Shared-risk liquidity infrastructure for on-chain institutions
@@ -153,7 +173,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-5 pt-8 border-t border-subtle">
           <p className="text-small text-tertiary">
-            © 2025 Aurelic. Built on Base.
+            © 2025 Invalend. Built on Base.
           </p>
           <div className="flex items-center gap-2 px-4 py-2 bg-tertiary border border-subtle rounded-md text-xs text-secondary">
             <div className="w-4 h-4 bg-accent rounded-sm"></div>

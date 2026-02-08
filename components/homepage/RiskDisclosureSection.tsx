@@ -31,9 +31,9 @@ export default function RiskDisclosureSection() {
         "Past performance does not guarantee future results",
         "Market volatility can impact liquidation timing",
       ],
-      color: "text-yellow-400",
-      bgColor: "bg-yellow-500/10",
-      borderColor: "border-yellow-500/30",
+      color: "text-cyan-400",
+      bgColor: "bg-cyan-400/10",
+      borderColor: "border-cyan-400/30",
     },
     {
       icon: Lock,
@@ -61,7 +61,7 @@ export default function RiskDisclosureSection() {
           style={{ animationDelay: "200ms", animationFillMode: "both" }}>
           <div className="label-line"></div>
           <span className="flex items-center gap-2">
-            <AlertTriangle className="w-4 h-4 text-yellow-400" />
+            <AlertTriangle className="w-4 h-4 text-cyan-400" />
             Risk Considerations
           </span>
           <div className="label-line"></div>
@@ -82,7 +82,7 @@ export default function RiskDisclosureSection() {
             isVisible ? "animate-slide-in-up" : "opacity-0"
           }`}
           style={{ animationDelay: "600ms", animationFillMode: "both" }}>
-          Understanding the risks and limitations of the Aurelic protocol
+          Understanding the risks and limitations of the Invalend protocol
         </p>
 
         {/* Risk Categories Grid */}
@@ -143,8 +143,8 @@ export default function RiskDisclosureSection() {
           }`}
           style={{ animationDelay: "1400ms", animationFillMode: "both" }}>
           <div className="flex items-start gap-4">
-            <div className="w-8 h-8 bg-yellow-500/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-              <AlertTriangle className="w-4 h-4 text-yellow-400" />
+            <div className="w-8 h-8 bg-cyan-400/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+              <AlertTriangle className="w-4 h-4 text-cyan-400" />
             </div>
             <div>
               <h4 className="text-h4 text-primary mb-3">

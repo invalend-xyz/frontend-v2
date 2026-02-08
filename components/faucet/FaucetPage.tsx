@@ -29,14 +29,14 @@ export const FaucetPage = () => {
               fontFamily: "Space Grotesk",
               lineHeight: "1.6",
             }}>
-            Get test USDC tokens for the Aurelic protocol. This faucet allows
+            Get test USDC tokens for the Invalend protocol. This faucet allows
             you to mint 1000 USDC tokens for testing purposes on Lisk Sepolia
             testnet.
           </p>
         </div>
 
         {/* Current Balance */}
-        <div className="bg-[#141414] rounded-lg p-6 border border-[rgba(245,200,16,0.15)]">
+        <div className="bg-[#141414] rounded-lg p-6 border border-cyan-500/15">
           <div className="text-center space-y-4">
             <h3
               className="text-lg font-normal text-white"
@@ -48,7 +48,7 @@ export const FaucetPage = () => {
               Your USDC Balance
             </h3>
             <div
-              className="text-3xl font-normal text-[#F5C810]"
+              className="text-3xl font-normal text-[#06b6d4]"
               style={{
                 fontFamily: "Space Grotesk",
                 letterSpacing: "-1px",
@@ -64,7 +64,7 @@ export const FaucetPage = () => {
         </div>
 
         {/* Mint Section */}
-        <div className="bg-[#141414] rounded-lg p-6 border border-[rgba(245,200,16,0.15)]">
+        <div className="bg-[#141414] rounded-lg p-6 border border-cyan-500/15">
           <div className="space-y-6">
             <div className="text-center">
               <h3
@@ -106,9 +106,9 @@ export const FaucetPage = () => {
 
             {/* Success Message */}
             {hasUpdatedBalance && !isMinting && (
-              <div className="bg-[#F5C810]/10 border border-[#F5C810]/30 rounded-lg p-4 text-center">
+              <div className="bg-[#06b6d4]/10 border border-[#06b6d4]/30 rounded-lg p-4 text-center">
                 <p
-                  className="text-sm text-[#F5C810] font-normal"
+                  className="text-sm text-[#06b6d4] font-normal"
                   style={{ fontFamily: "Space Grotesk" }}>
                   Successfully minted 1000 USDC! Your balance has been
                   updated.
@@ -152,7 +152,7 @@ export const FaucetPage = () => {
           <p
             className="text-sm text-[#A3A3A3] font-normal"
             style={{ fontFamily: "Space Grotesk" }}>
-            <span className="text-[#F5C810] font-normal">Network:</span> Lisk
+            <span className="text-[#06b6d4] font-normal">Network:</span> Lisk
             Sepolia Testnet
           </p>
           <p

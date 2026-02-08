@@ -10,15 +10,15 @@ import { getTransactionUrl } from "@/lib/contracts/explorer";
 // ============================================================================
 
 const COLORS = {
-  accent: "#F5C810",      // Primary gold
-  accentHover: "#F5C810", // Use same with opacity
+  accent: "#06b6d4",      // Primary gold
+  accentHover: "#06b6d4", // Use same with opacity
   bgPrimary: "#0A0A0A",   // Dark background
   bgSecondary: "#141414", // Card background
   bgTertiary: "#1E1E1E",  // Input/hover background
   textPrimary: "#FFFFFF", // White text
   textSecondary: "#A3A3A3", // Gray text
-  border: "rgba(245, 200, 16, 0.15)", // Gold border
-  borderHover: "rgba(245, 200, 16, 0.3)",
+  border: "rgba(6, 182, 212, 0.15)", // Gold border
+  borderHover: "rgba(6, 182, 212, 0.3)",
 };
 
 // ============================================================================
@@ -82,10 +82,10 @@ export function TransactionButton({
               <div
                 className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium transition-colors ${
                   i + 1 < currentStep
-                    ? "bg-[#F5C810] text-[#0A0A0A]"
+                    ? "bg-[#06b6d4] text-[#0A0A0A]"
                     : i + 1 === currentStep
-                    ? "bg-[#F5C810] text-[#0A0A0A]"
-                    : "bg-[#1E1E1E] text-[#A3A3A3] border border-[rgba(245,200,16,0.15)]"
+                    ? "bg-[#06b6d4] text-[#0A0A0A]"
+                    : "bg-[#1E1E1E] text-[#A3A3A3] border border-cyan-500/15"
                 }`}
               >
                 {i + 1 < currentStep ? "✓" : i + 1}
@@ -93,7 +93,7 @@ export function TransactionButton({
               {i < totalSteps - 1 && (
                 <div
                   className={`w-8 h-0.5 ${
-                    i + 1 < currentStep ? "bg-[#F5C810]" : "bg-[#1E1E1E]"
+                    i + 1 < currentStep ? "bg-[#06b6d4]" : "bg-[#1E1E1E]"
                   }`}
                 />
               )}
@@ -122,7 +122,7 @@ export function TransactionButton({
             href={getTransactionUrl(txHash)}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs text-[#F5C810] hover:text-[#F5C810]/80 underline transition-colors"
+            className="text-xs text-[#06b6d4] hover:text-[#06b6d4]/80 underline transition-colors"
             style={{ fontFamily: "Space Grotesk" }}
           >
             View on Explorer ↗
@@ -132,9 +132,9 @@ export function TransactionButton({
 
       {/* Error Display */}
       {error && state === "ERROR" && (
-        <div className="bg-[#F5C810]/10 border border-[#F5C810]/30 rounded-lg p-3">
+        <div className="bg-[#06b6d4]/10 border border-[#06b6d4]/30 rounded-lg p-3">
           <p
-            className="text-sm text-[#F5C810] font-normal"
+            className="text-sm text-[#06b6d4] font-normal"
             style={{ fontFamily: "Space Grotesk" }}
           >
             {error.message}
@@ -182,11 +182,11 @@ export function SimpleTransactionButton({
   };
 
   const variantClasses = {
-    primary: "bg-[#F5C810] text-[#0A0A0A] hover:opacity-90 focus:ring-[#F5C810]",
-    secondary: "bg-[#1E1E1E] text-white hover:bg-[#2E2E2E] focus:ring-[#F5C810] border border-[rgba(245,200,16,0.15)]",
-    warning: "bg-[#F5C810]/80 text-[#0A0A0A] hover:opacity-90 focus:ring-[#F5C810]",
-    danger: "bg-[#1E1E1E] text-[#F5C810] border border-[#F5C810]/50 focus:ring-[#F5C810]",
-    success: "bg-[#F5C810] text-[#0A0A0A] focus:ring-[#F5C810]",
+    primary: "bg-[#06b6d4] text-[#0A0A0A] hover:opacity-90 focus:ring-[#06b6d4]",
+    secondary: "bg-[#1E1E1E] text-white hover:bg-[#2E2E2E] focus:ring-[#06b6d4] border border-cyan-500/15",
+    warning: "bg-[#06b6d4]/80 text-[#0A0A0A] hover:opacity-90 focus:ring-[#06b6d4]",
+    danger: "bg-[#1E1E1E] text-[#06b6d4] border border-[#06b6d4]/50 focus:ring-[#06b6d4]",
+    success: "bg-[#06b6d4] text-[#0A0A0A] focus:ring-[#06b6d4]",
   };
 
   const baseClasses =
@@ -239,8 +239,8 @@ export function ActionButton({
   };
 
   const variantClasses = {
-    primary: "bg-[#F5C810] text-[#0A0A0A] hover:opacity-90 focus:ring-[#F5C810]",
-    secondary: "bg-[#1E1E1E] text-white hover:bg-[#2E2E2E] focus:ring-[#F5C810] border border-[rgba(245,200,16,0.15)]",
+    primary: "bg-[#06b6d4] text-[#0A0A0A] hover:opacity-90 focus:ring-[#06b6d4]",
+    secondary: "bg-[#1E1E1E] text-white hover:bg-[#2E2E2E] focus:ring-[#06b6d4] border border-cyan-500/15",
   };
 
   const baseClasses =
@@ -389,7 +389,7 @@ export function ApproveActionButton({
     "inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#0A0A0A] disabled:opacity-50 disabled:cursor-not-allowed transform active:scale-[0.98]";
 
   // Use accent color for all states
-  const buttonClass = "bg-[#F5C810] text-[#0A0A0A] hover:opacity-90 focus:ring-[#F5C810]";
+  const buttonClass = "bg-[#06b6d4] text-[#0A0A0A] hover:opacity-90 focus:ring-[#06b6d4]";
 
   return (
     <button

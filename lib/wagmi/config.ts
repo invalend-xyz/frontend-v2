@@ -32,8 +32,8 @@ export const liskSepolia = defineChain({
 });
 
 export const config = getDefaultConfig({
-  appName: "Aurelic",
-  projectId: projectId || "aurelic-demo",
+  appName: "Invalend",
+  projectId: projectId || "invalend-demo",
   chains: [liskSepolia],
   ssr: false,
   storage: createStorage({

@@ -23,7 +23,7 @@ export default function Navbar() {
     { href: "#architecture", label: "Architecture" },
     { href: "#features", label: "Features" },
     { href: "#use-cases", label: "Use Cases" },
-    { href: "https://aurelic-docs-lisk.vercel.app/", label: "Documentation" },
+    { href: "https://invalend-docs-lisk.vercel.app/", label: "Documentation" },
   ];
 
   return (
@@ -41,7 +41,7 @@ export default function Navbar() {
         <div
           className={`transition-all duration-400 ease-in-out ${
             isScrolled
-              ? "bg-[#0A0A0A]/90 backdrop-blur-[24px] shadow-[0_8px_40px_rgba(245,200,16,0.15)] rounded-2xl h-[72px]"
+              ? "bg-[#0A0A0A]/90 backdrop-blur-[24px] shadow-[0_8px_40px_rgba(6, 182, 212,0.15)] rounded-2xl h-[72px]"
               : "bg-transparent backdrop-blur-0 shadow-none rounded-none h-[88px]"
           }`}
           style={{
@@ -55,13 +55,22 @@ export default function Navbar() {
             {/* Logo */}
             <Link
               href="/"
-              className="flex items-center gap-3 transition-opacity duration-300 hover:opacity-80">
+              className="flex items-center gap-2.5 transition-opacity duration-300 hover:opacity-80">
               <Image
-                width={130}
-                height={130}
-                src="/logo.png"
-                alt="Aurelic"
+                src="/Invalend.png"
+                alt="Invalend"
+                width={32}
+                height={32}
+                className="rounded-lg"
               />
+              <span
+                className="text-xl font-medium text-white"
+                style={{
+                  fontFamily: "Space Grotesk",
+                  letterSpacing: "-0.5px",
+                }}>
+                Invalend
+              </span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -73,7 +82,7 @@ export default function Navbar() {
                   className="transition-colors duration-300 text-base hover:opacity-80"
                   style={{ color: "#A3A3A3" }}
                   onMouseEnter={(e) =>
-                    (e.currentTarget.style.color = "#F5C810")
+                    (e.currentTarget.style.color = "#06b6d4")
                   }
                   onMouseLeave={(e) =>
                     (e.currentTarget.style.color = "#A3A3A3")
@@ -91,23 +100,23 @@ export default function Navbar() {
                 href="/app"
                 className="flex items-center gap-2 px-6 py-3 rounded-lg transition-all duration-300 group"
                 style={{
-                  background: "#F5C810",
+                  background: "#06b6d4",
                   color: "#0A0A0A",
-                  border: "1px solid #F5C810",
+                  border: "1px solid #06b6d4",
                   fontSize: "14px",
                   fontWeight: "400",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = "transparent";
-                  e.currentTarget.style.color = "#F5C810";
+                  e.currentTarget.style.color = "#06b6d4";
                   e.currentTarget.style.transform = "translateY(-2px)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "#F5C810";
+                  e.currentTarget.style.background = "#06b6d4";
                   e.currentTarget.style.color = "#0A0A0A";
                   e.currentTarget.style.transform = "translateY(0)";
                 }}
-                aria-label="Launch Aurelic application">
+                aria-label="Launch Invalend application">
                 Launch App
                 <ArrowRight
                   className="w-4 h-4 group-hover:translate-x-1 transition-transform"
@@ -149,7 +158,7 @@ export default function Navbar() {
               style={{
                 background: "rgba(10, 10, 10, 0.95)",
                 backdropFilter: "blur(24px)",
-                boxShadow: "0 8px 40px rgba(245, 200, 16, 0.15)",
+                boxShadow: "0 8px 40px rgba(6, 182, 212, 0.15)",
               }}>
               <div className="container py-6 space-y-6">
                 {navLinks.map((link) => (
@@ -159,7 +168,7 @@ export default function Navbar() {
                     className="block transition-colors duration-300 text-base hover:opacity-80"
                     style={{ color: "#A3A3A3" }}
                     onMouseEnter={(e) =>
-                      (e.currentTarget.style.color = "#F5C810")
+                      (e.currentTarget.style.color = "#06b6d4")
                     }
                     onMouseLeave={(e) =>
                       (e.currentTarget.style.color = "#A3A3A3")
@@ -174,21 +183,21 @@ export default function Navbar() {
                   href="/app"
                   className="flex items-center gap-2 px-6 py-3 rounded-lg transition-all duration-300 group w-full justify-center"
                   style={{
-                    background: "#F5C810",
+                    background: "#06b6d4",
                     color: "#0A0A0A",
-                    border: "1px solid #F5C810",
+                    border: "1px solid #06b6d4",
                     fontSize: "14px",
                     fontWeight: "400",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.background = "transparent";
-                    e.currentTarget.style.color = "#F5C810";
+                    e.currentTarget.style.color = "#06b6d4";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.background = "#F5C810";
+                    e.currentTarget.style.background = "#06b6d4";
                     e.currentTarget.style.color = "#0A0A0A";
                   }}
-                  aria-label="Launch Aurelic application">
+                  aria-label="Launch Invalend application">
                   Launch App
                   <ArrowRight
                     className="w-4 h-4 group-hover:translate-x-1 transition-transform"

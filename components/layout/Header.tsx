@@ -1,35 +1,32 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 
 export const Header = () => {
   return (
-    <header className="bg-[#0A0A0A] border-b border-[rgba(245,200,16,0.15)]">
+    <header className="bg-[#0A0A0A] border-b border-cyan-500/15">
       <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div
-              className="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-105"
-              style={{
-                background: "rgba(245, 200, 16, 0.1)",
-                border: "1px solid rgba(245, 200, 16, 0.2)",
-              }}>
-              <div
-                className="w-5 h-5 rounded-sm transition-all duration-300 group-hover:scale-110"
-                style={{ background: "#F5C810" }}
-              />
-            </div>
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <Image
+              src="/Invalend.png"
+              alt="Invalend"
+              width={32}
+              height={32}
+              className="rounded-lg transition-all duration-300 group-hover:scale-105"
+            />
             <div className="flex items-center gap-3">
-              <h1
-                className="text-2xl font-normal text-[#F5C810] transition-colors duration-300 group-hover:text-[#F5C810]"
+              <span
+                className="text-xl font-medium text-white transition-colors duration-300"
                 style={{
                   fontFamily: "Space Grotesk",
                   letterSpacing: "-0.5px",
                 }}>
-                Aurelic
-              </h1>
+                Invalend
+              </span>
               <span
-                className="text-sm text-[#A3A3A3] bg-[#1E1E1E] px-3 py-1 rounded-lg border border-[rgba(245,200,16,0.15)]"
+                className="text-sm text-[#A3A3A3] bg-[#1E1E1E] px-3 py-1 rounded-lg border border-cyan-500/15"
                 style={{ fontFamily: "Space Grotesk" }}>
                 PoC
               </span>

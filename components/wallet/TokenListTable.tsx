@@ -23,10 +23,10 @@ const TokenRow: React.FC<ItemProps> = ({
   const price = isUSDC ? "1.00" : token.token.symbol === "ETH" ? "2,450.00" : token.token.symbol === "BTC" ? "42,000.00" : "-";
   
   return (
-    <div className="grid grid-cols-12 gap-4 items-center py-4 border-b border-[rgba(245,200,16,0.1)] last:border-0 hover:bg-white/5 transition-colors px-4 rounded-lg">
+    <div className="grid grid-cols-12 gap-4 items-center py-4 border-b border-cyan-500/10 last:border-0 hover:bg-cyan-500/5 transition-colors px-4 rounded-lg">
       {/* Token Info */}
       <div className="col-span-4 flex items-center gap-3">
-        <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-xs text-[#F5C810] border border-[#F5C810]/20 font-bold">
+        <div className="w-8 h-8 rounded-full bg-cyan-500/10 flex items-center justify-center text-xs text-[#06b6d4] border border-[#06b6d4]/20 font-bold">
             {token.token.symbol[0]}
         </div>
         <div>
@@ -57,7 +57,7 @@ const TokenRow: React.FC<ItemProps> = ({
       <div className="col-span-2 text-right">
         <button
           onClick={() => onOpenWithdraw(token)}
-          className="text-xs font-medium bg-[#F5C810]/10 text-[#F5C810] border border-[#F5C810]/30 hover:bg-[#F5C810] hover:text-black transition-all px-4 py-2 rounded uppercase tracking-wider transform active:scale-95"
+          className="text-xs font-medium bg-[#06b6d4]/10 text-[#06b6d4] border border-[#06b6d4]/30 hover:bg-[#06b6d4] hover:text-black transition-all px-4 py-2 rounded uppercase tracking-wider transform active:scale-95"
           style={{ fontFamily: "Space Grotesk" }}
         >
           Withdraw
@@ -77,9 +77,9 @@ export const TokenListTable: React.FC<TokenListProps> = ({
   onOpenWithdraw,
 }) => {
   return (
-    <div className="bg-[#1E1E1E] rounded-lg border border-[rgba(245,200,16,0.15)] overflow-hidden">
+    <div className="bg-[#1E1E1E] rounded-lg border border-cyan-500/15 overflow-hidden">
         {/* Header */}
-        <div className="grid grid-cols-12 gap-4 px-6 py-4 bg-white/5 border-b border-[rgba(245,200,16,0.15)] text-sm text-[#A3A3A3]" style={{ fontFamily: "Space Grotesk" }}>
+        <div className="grid grid-cols-12 gap-4 px-6 py-4 bg-cyan-500/5 border-b border-cyan-500/15 text-sm text-[#A3A3A3]" style={{ fontFamily: "Space Grotesk" }}>
             <div className="col-span-4">Asset</div>
             <div className="col-span-3">Balance</div>
             <div className="col-span-3">Price</div>

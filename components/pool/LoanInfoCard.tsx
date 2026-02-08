@@ -41,11 +41,11 @@ export const LoanInfoCard = () => {
         </div>
       </div>
 
-      <div className="mt-4 pt-4 border-t border-gray-600">
-        <div className="bg-yellow-400/10 border border-yellow-400/30 rounded-lg p-3">
+      <div className="mt-4 pt-4 border-t border-cyan-500/15">
+        <div className="bg-cyan-400/10 border border-cyan-400/30 rounded-lg p-3">
           <div className="flex items-start gap-2">
             <svg
-              className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5"
+              className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5"
               fill="currentColor"
               viewBox="0 0 20 20">
               <path
@@ -55,8 +55,8 @@ export const LoanInfoCard = () => {
               />
             </svg>
             <div>
-              <h5 className="text-yellow-400 font-medium text-sm">Important</h5>
-              <p className="text-yellow-400/80 text-xs mt-1">
+              <h5 className="text-cyan-400 font-medium text-sm">Important</h5>
+              <p className="text-cyan-400/80 text-xs mt-1">
                 Always ensure you can repay your loan. Monitor your positions
                 carefully and manage risk appropriately.
               </p>

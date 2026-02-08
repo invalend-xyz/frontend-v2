@@ -87,10 +87,10 @@ export const LoanStatusWidget = () => {
         </div>
       )}
 
-      <div className="mt-4 pt-3 border-t border-gray-600">
+      <div className="mt-4 pt-3 border-t border-cyan-500/15">
         <button
           onClick={() => refetch()}
-          className="w-full text-sm text-teal-400 hover:text-teal-300 transition-colors flex items-center justify-center gap-1">
+          className="w-full text-sm text-cyan-400 hover:text-cyan-300 transition-colors flex items-center justify-center gap-1">
           <svg
             className="w-4 h-4"
             fill="none"
