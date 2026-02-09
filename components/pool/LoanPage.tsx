@@ -11,8 +11,8 @@ export const LoanPage = () => {
   const [activeTab, setActiveTab] = useState<TabType>("borrow");
 
   const tabs = [
-    { id: "borrow", label: "Borrow", description: "Create new loan" },
-    { id: "repay", label: "Repay", description: "Repay existing loan" },
+    { id: "borrow", label: "Borrow", description: "Open new position" },
+    { id: "repay", label: "Repay", description: "Close position" },
   ] as const;
 
   return (
@@ -22,10 +22,10 @@ export const LoanPage = () => {
           {/* Header */}
           <div className="mb-8">
             <h1 className="text-3xl font-bold text-white mb-2">
-              Loan Management
+              Borrow & Leverage
             </h1>
             <p className="text-gray-400">
-              Manage your collateralized loans and trading positions
+              Open leveraged positions by borrowing against your collateral
             </p>
           </div>
 

@@ -9,34 +9,34 @@ export const LoanInfoCard = () => {
         <div className="space-y-2">
           <h4 className="text-white font-medium">1. Deposit Collateral</h4>
           <p className="text-gray-400">
-            Deposit USDC as collateral to secure your loan. The required
-            collateral is calculated based on the loan amount.
+            Provide USDC as collateral to secure your loan. The required amount
+            depends on your desired leverage.
           </p>
         </div>
 
         <div className="space-y-2">
-          <h4 className="text-white font-medium">2. Receive Loan</h4>
+          <h4 className="text-white font-medium">2. Borrow USDC</h4>
           <p className="text-gray-400">
-            Get your loan amount plus additional funding from the lending pool
-            for trading purposes.
+            Receive borrowed USDC plus additional leverage from the lending
+            pool into your trading wallet.
           </p>
         </div>
 
         <div className="space-y-2">
           <h4 className="text-white font-medium">
-            3. Trade with Restricted Wallet
+            3. Trade with Leverage
           </h4>
           <p className="text-gray-400">
-            Use the restricted trading wallet to trade on supported DEXs. Your
-            trades are limited to whitelisted tokens.
+            Use your trading wallet to swap tokens on Aerodrome DEX. Only
+            whitelisted tokens are supported.
           </p>
         </div>
 
         <div className="space-y-2">
-          <h4 className="text-white font-medium">4. Repay to Unlock</h4>
+          <h4 className="text-white font-medium">4. Repay to Withdraw</h4>
           <p className="text-gray-400">
-            Repay your loan anytime to unlock your collateral and close the
-            trading position.
+            Close your position anytime by repaying the loan. Your collateral
+            and any profits will be returned.
           </p>
         </div>
       </div>
@@ -55,10 +55,10 @@ export const LoanInfoCard = () => {
               />
             </svg>
             <div>
-              <h5 className="text-cyan-400 font-medium text-sm">Important</h5>
+              <h5 className="text-cyan-400 font-medium text-sm">Risk Notice</h5>
               <p className="text-cyan-400/80 text-xs mt-1">
-                Always ensure you can repay your loan. Monitor your positions
-                carefully and manage risk appropriately.
+                Monitor your position closely. Ensure you can repay before
+                market movements affect your collateral.
               </p>
             </div>
           </div>

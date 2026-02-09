@@ -5,7 +5,7 @@ import { useDeposit } from "@/hooks/contracts/useDeposit";
 import { ApproveActionButton } from "@/components/ui/TransactionButton";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 import { ErrorDisplay } from "@/components/ui/ErrorDisplay";
-import { formatUSDC } from "@/lib/utils/formatters";
+import { formatUSDC, formatTokenAmount } from "@/lib/utils/formatters";
 
 export const DepositForm = () => {
   const {
@@ -66,7 +66,7 @@ export const DepositForm = () => {
               letterSpacing: "-0.5px",
               lineHeight: "1.2",
             }}>
-            Deposit USDC
+            Supply USDC
           </h3>
           <p
             className="text-lg text-[#A3A3A3]"
@@ -74,25 +74,25 @@ export const DepositForm = () => {
               fontFamily: "Space Grotesk",
               lineHeight: "1.6",
             }}>
-            Earn 6% APY and provide liquidity for leveraged loans
+            Deposit USDC to earn 6% APY while providing liquidity for borrowers
           </p>
         </div>
 
-        {/* User Info */}
+        {/* Your Position */}
         <div className="bg-[#1E1E1E] rounded-lg p-6 space-y-4">
           <InfoRow
-            label="Available Balance"
-            value={`${formatUSDC(usdcBalance || BigInt(0))} USDC`}
+            label="Wallet Balance"
+            value={`${formatTokenAmount(usdcBalance || BigInt(0), 6, 2)} USDC`}
           />
           {userInfo && (
             <>
               <InfoRow
-                label="Your Shares"
-                value={`${formatUSDC(userInfo[0])} Shares`}
+                label="Your Pool Shares"
+                value={`${formatTokenAmount(userInfo[0], 6, 2)} Shares`}
               />
               <InfoRow
-                label="Asset Value"
-                value={`${formatUSDC(userInfo[1])} USDC`}
+                label="Current Value"
+                value={`${formatTokenAmount(userInfo[1], 6, 2)} USDC`}
               />
             </>
           )}
@@ -103,13 +103,13 @@ export const DepositForm = () => {
           <label
             className="block text-sm font-normal text-[#A3A3A3]"
             style={{ fontFamily: "Space Grotesk" }}>
-            Amount to Deposit
+            Amount to Supply
           </label>
           {showExpectedShares && (
             <p
-              className="text-sm text-[#A3A3A3] font-normal"
+              className="text-sm text-[#06b6d4] font-normal"
               style={{ fontFamily: "Space Grotesk" }}>
-              You will receive: {formatUSDC(expectedShares)} Shares
+              You will receive: {formatTokenAmount(expectedShares, 6, 2)} pool shares
             </p>
           )}
           <div className="relative">
@@ -152,12 +152,12 @@ export const DepositForm = () => {
             <LoadingSpinner size="sm" />
             <div>
               <p className="text-sm text-white font-medium">
-                {isApproving ? "Approving USDC..." : "Depositing..."}
+                {isApproving ? "Approving USDC..." : "Supplying USDC..."}
               </p>
               <p className="text-xs text-gray-400">
                 {isApproving
-                  ? "Waiting for approval..."
-                  : "Waiting for deposit..."}
+                  ? "Please confirm in your wallet"
+                  : "Transaction pending..."}
               </p>
             </div>
           </div>
@@ -167,11 +167,11 @@ export const DepositForm = () => {
         {currentStep === "deposit" && isApproveSuccess && !isApproving && (
           <SuccessBox
             message="Approval successful!"
-            subtext="Click Deposit to continue."
+            subtext="Now click Supply to complete your deposit."
           />
         )}
         {currentStep === "success" && isDepositSuccess && !isDepositing && (
-          <SuccessBox message="Deposit successful! Your funds are now earning yield." />
+          <SuccessBox message="Supply successful! Your USDC is now earning 6% APY." />
         )}
 
         {/* Action Button */}
@@ -185,9 +185,9 @@ export const DepositForm = () => {
           onExecute={handleDeposit}
           approveLabel="Approve USDC"
           approvingLabel="Approving USDC..."
-          executeLabel="Deposit USDC"
-          executingLabel="Depositing..."
-          successLabel="Deposit Successful!"
+          executeLabel="Supply USDC"
+          executingLabel="Supplying USDC..."
+          successLabel="Supply Successful!"
           disabled={!isValidAmount}
           size="lg"
           className="w-full"
@@ -197,9 +197,9 @@ export const DepositForm = () => {
         <div
           className="text-xs text-[#A3A3A3] space-y-2 font-normal"
           style={{ fontFamily: "Space Grotesk" }}>
-          <p>• Earn 6% APY on your USDC</p>
-          <p>• Withdraw anytime with accrued yield</p>
-          <p>• First time? You must approve USDC before deposit</p>
+          <p>• Earn 6% fixed APY on your supplied USDC</p>
+          <p>• Withdraw anytime with your accrued earnings</p>
+          <p>• First time? Approve USDC spending before supplying</p>
         </div>
       </div>
     </div>

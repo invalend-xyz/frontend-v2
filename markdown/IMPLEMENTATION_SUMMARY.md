@@ -6,7 +6,7 @@
 
 1. ✅ **Separated Trading Component**: Moved from inline Layout.tsx to dedicated `/components/trading/` directory
 2. ✅ **RestrictedWallet Integration**: Implemented smart contract integration using RestrictedWallet.sol
-3. ✅ **LISK Token Support**: Added LSK token configuration with proper Lisk network support
+3. ✅ **Mock Token Support**: Added MockUSDC, MockETH, MockBTC token configuration with proper Base network support
 4. ✅ **PoC Functionality**: Created a working proof-of-concept for leveraged trading
 
 ### 🏗️ **Architecture & File Structure**
@@ -25,7 +25,7 @@ frontend/src/components/trading/
 
 #### **Trading Interface**
 
-- **Token Selection**: Support for ETH, USDC, WBTC, LSK, UNI
+- **Token Selection**: Support for ETH, USDC, BTC
 - **Swap Interface**: Intuitive token swapping with amount inputs
 - **Slippage Control**: Configurable slippage tolerance (0.1% - 50%)
 - **Real-time Validation**: Input validation with error messages
@@ -38,12 +38,12 @@ frontend/src/components/trading/
 - **Aerodrome**: Execute swaps via Aerodrome router with security restrictions
 - **Token Whitelisting**: Only approved tokens can be traded
 
-#### **LISK Token Features**
+#### **Mock Token Features**
 
-- **LSK Configuration**: Added Lisk token with proper decimals (18)
-- **Price Integration**: LSK pricing at $1.25 (placeholder)
-- **Fee Optimization**: Recommended higher fee tiers for LSK pairs
-- **Lisk Network**: Configured for Lisk Sepolia testnet (Chain ID: 4202)
+- **MockUSDC**: USDC mock token with 6 decimals
+- **MockETH**: ETH mock token with 18 decimals  
+- **MockBTC**: BTC mock token with 8 decimals
+- **Base Network**: Configured for Base Sepolia testnet (Chain ID: 84532)
 
 #### **Security & Validation**
 
@@ -57,8 +57,8 @@ frontend/src/components/trading/
 
 #### **Trading Flow**
 
-1. **Connect Wallet** → User connects to Lisk Sepolia
-2. **Select Tokens** → Choose from/to tokens (including LSK)
+1. **Connect Wallet** → User connects to Base Sepolia
+2. **Select Tokens** → Choose from/to tokens
 3. **Enter Amount** → Input trade size with real-time validation
 4. **Approve Margin** → Approve USDC for 20% margin requirement
 5. **Create Loan** → Create leveraged position through LoanManager
@@ -96,11 +96,9 @@ canCreateLoan()           // Check eligibility for new loans
 
 ```typescript
 TOKENS = {
-  ETH: "0x0000...0000", // Native ETH
-  USDC: "0xe61995...16a", // MockUSDC (actual deployed address)
-  LSK: "0xac4853...1A24", // Lisk token (example address)
-  WBTC: "0x0E4aaF...e03", // Wrapped Bitcoin (example)
-  UNI: "0x1f9840...984", // Aerodrome token (example)
+  ETH: "0xe49362642deB5126c2670aEA8D0B2D2f0a4c51a9",  // MockETH
+  USDC: "0x986Bcfa0E7fd97fF5b00cDA486956Fa400Ba6E0e", // MockUSDC
+  BTC: "0x44A8761b68E0C8829D803fFeEad1b84303346B68",  // MockBTC
 };
 ```
 
@@ -136,7 +134,7 @@ TRADING_CONFIG = {
 
 #### **Network Configuration**
 
-- **Chain**: Lisk Sepolia (4202)
+- **Chain**: Base Sepolia (84532)
 - **Aerodrome Router**: Router address (configurable)
 - **Pool Types**: Volatile and Stable pools
 
@@ -146,7 +144,7 @@ TRADING_CONFIG = {
 
 - ✅ Complete UI/UX for trading
 - ✅ Smart contract integration
-- ✅ LISK token support
+- ✅ Mock token support
 - ✅ Error handling and validation
 - ✅ Real-time balance tracking
 - ✅ Slippage protection
@@ -188,7 +186,7 @@ The trading component has been successfully:
 
 1. **Separated** from Layout.tsx into a modular, reusable component
 2. **Integrated** with RestrictedWallet smart contract functionality
-3. **Enhanced** with LISK token support and Lisk network configuration
+3. **Enhanced** with Mock token support and Base network configuration
 4. **Optimized** for PoC demonstration with production-ready architecture
 
-The implementation provides a solid foundation for leveraged trading on Lisk network with proper security, validation, and user experience considerations.
+The implementation provides a solid foundation for leveraged trading on Base network with proper security, validation, and user experience considerations.

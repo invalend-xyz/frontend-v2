@@ -1,6 +1,6 @@
 import { formatUnits, parseUnits } from "viem";
 
-// Format USDC amount (6 decimals)
+// Format USDC amount (6 decimals) - raw value without commas for calculations/inputs
 export const formatUSDC = (
   amount: bigint | string | number,
   decimals: number = 6
@@ -9,6 +9,29 @@ export const formatUSDC = (
     const bigIntAmount =
       typeof amount === "string" ? BigInt(amount) : BigInt(amount);
     return formatUnits(bigIntAmount, decimals);
+  } catch {
+    return "0";
+  }
+};
+
+// Format USDC for display with commas (e.g., "1,500.00")
+export const formatUSDCDisplay = (
+  amount: bigint | string | number,
+  decimals: number = 6
+): string => {
+  try {
+    const bigIntAmount =
+      typeof amount === "string" ? BigInt(amount) : BigInt(amount);
+    const formatted = formatUnits(bigIntAmount, decimals);
+    const num = parseFloat(formatted);
+    
+    if (num >= 1000) {
+      return num.toLocaleString("en-US", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      });
+    }
+    return num.toFixed(2);
   } catch {
     return "0";
   }
@@ -98,5 +121,110 @@ export const formatRelativeTime = (
     return "Just now";
   } catch {
     return "-";
+  }
+};
+
+// Format number with commas (1,500,020)
+export const formatNumberWithCommas = (
+  value: number | string | bigint
+): string => {
+  try {
+    const num = typeof value === "bigint" ? Number(value) : Number(value);
+    if (isNaN(num)) return "0";
+    return num.toLocaleString("en-US");
+  } catch {
+    return "0";
+  }
+};
+
+// Format compact number (1.5M, 2.4K, etc.)
+export const formatCompactNumber = (
+  value: number | string | bigint
+): string => {
+  try {
+    const num = typeof value === "bigint" ? Number(value) : Number(value);
+    if (isNaN(num)) return "0";
+    
+    if (num >= 1_000_000_000) {
+      return `${(num / 1_000_000_000).toFixed(2).replace(/\.?0+$/, "")}B`;
+    }
+    if (num >= 1_000_000) {
+      return `${(num / 1_000_000).toFixed(2).replace(/\.?0+$/, "")}M`;
+    }
+    if (num >= 1_000) {
+      return `${(num / 1_000).toFixed(2).replace(/\.?0+$/, "")}K`;
+    }
+    return num.toFixed(2).replace(/\.?0+$/, "");
+  } catch {
+    return "0";
+  }
+};
+
+// Format USD currency ($1,234.56)
+export const formatUSD = (
+  value: number | string | bigint,
+  decimals: number = 2
+): string => {
+  try {
+    const num = typeof value === "bigint" ? Number(value) : Number(value);
+    if (isNaN(num)) return "$0.00";
+    return new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals,
+    }).format(num);
+  } catch {
+    return "$0.00";
+  }
+};
+
+// Format compact USD ($1.5M, $2.4K)
+export const formatCompactUSD = (value: number | string | bigint): string => {
+  try {
+    const num = typeof value === "bigint" ? Number(value) : Number(value);
+    if (isNaN(num)) return "$0";
+    
+    if (num >= 1_000_000_000) {
+      return `$${(num / 1_000_000_000).toFixed(2).replace(/\.?0+$/, "")}B`;
+    }
+    if (num >= 1_000_000) {
+      return `$${(num / 1_000_000).toFixed(2).replace(/\.?0+$/, "")}M`;
+    }
+    if (num >= 1_000) {
+      return `$${(num / 1_000).toFixed(2).replace(/\.?0+$/, "")}K`;
+    }
+    return `$${num.toFixed(2)}`;
+  } catch {
+    return "$0";
+  }
+};
+
+// Format token amount with proper decimals
+export const formatTokenAmount = (
+  amount: bigint | string | number,
+  decimals: number = 6,
+  displayDecimals: number = 2
+): string => {
+  try {
+    const bigIntAmount =
+      typeof amount === "string" ? BigInt(amount) : BigInt(amount);
+    const formatted = formatUnits(bigIntAmount, decimals);
+    const num = parseFloat(formatted);
+    
+    // For very small numbers, show more decimals
+    if (num > 0 && num < 0.01) {
+      return num.toFixed(6).replace(/\.?0+$/, "");
+    }
+    // For larger numbers, use commas
+    if (num >= 1000) {
+      return num.toLocaleString("en-US", {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: displayDecimals,
+      });
+    }
+    return num.toFixed(displayDecimals);
+  } catch {
+    return "0";
   }
 };

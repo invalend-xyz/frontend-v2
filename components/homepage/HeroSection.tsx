@@ -117,7 +117,7 @@ export default function HeroSection() {
                     color: "#06b6d4",
                     fontWeight: "400",
                   }}>
-                  Live on Lisk Sepolia Testnet
+                  Live on Base Sepolia Testnet
                 </span>
               </div>
 
@@ -173,7 +173,7 @@ export default function HeroSection() {
                 </Link>
 
                 <a
-                  href="https://invalend-docs-lisk.vercel.app/"
+                  href="https://invalend-docs.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 px-8 py-4 rounded-lg transition-all duration-300 group"

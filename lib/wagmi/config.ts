@@ -8,10 +8,10 @@ if (!projectId) {
   console.warn("WALLET_CONNECT_PROJECT_ID not found");
 }
 
-// Define Lisk Sepolia - our primary and only supported chain
-export const liskSepolia = defineChain({
-  id: 4202,
-  name: "Lisk Sepolia",
+// Define Base Sepolia - our primary and only supported chain
+export const baseSepolia = defineChain({
+  id: 84532,
+  name: "Base Sepolia",
   nativeCurrency: {
     decimals: 18,
     name: "Ether",
@@ -19,13 +19,13 @@ export const liskSepolia = defineChain({
   },
   rpcUrls: {
     default: {
-      http: ["https://rpc.sepolia-api.lisk.com"],
+      http: ["https://sepolia.base.org"],
     },
   },
   blockExplorers: {
     default: {
-      name: "Lisk Sepolia Blockscout",
-      url: "https://sepolia-blockscout.lisk.com",
+      name: "BaseScan Sepolia",
+      url: "https://sepolia.basescan.org",
     },
   },
   testnet: true,
@@ -34,7 +34,7 @@ export const liskSepolia = defineChain({
 export const config = getDefaultConfig({
   appName: "Invalend",
   projectId: projectId || "invalend-demo",
-  chains: [liskSepolia],
+  chains: [baseSepolia],
   ssr: false,
   storage: createStorage({
     storage: typeof window !== "undefined" ? window.localStorage : undefined,

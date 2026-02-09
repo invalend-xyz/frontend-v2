@@ -97,11 +97,11 @@ export const TradingPage: React.FC = () => {
        {!restrictedWalletAddress ? (
            <div className="bg-[#141414] border border-cyan-400/20 rounded-xl p-8 text-center max-w-2xl mx-auto mt-12">
                <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
-                   ⚠️
+                   💡
                </div>
-               <h2 className="text-xl text-white mb-2" style={{fontFamily: "Space Grotesk"}}>Restricted Wallet Required</h2>
+               <h2 className="text-xl text-white mb-2" style={{fontFamily: "Space Grotesk"}}>Open a Position to Trade</h2>
                <p className="text-[#A3A3A3] mb-6">
-                   You need to initialize a loan to create a restricted wallet. This wallet allows you to trade with leverage.
+                   You need to borrow USDC first to create a trading wallet. Your borrowed funds will be available for swapping here.
                </p>
                {/* Could add button to go to Loan page */}
            </div>

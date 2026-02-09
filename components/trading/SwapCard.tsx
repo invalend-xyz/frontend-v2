@@ -116,7 +116,7 @@ export const SwapCard: React.FC<SwapCardProps> = ({
           loading={isExecuting}
           className="w-full text-lg py-4"
         >
-            Swap
+            {isExecuting ? "Swapping..." : `Swap ${tokenIn?.symbol || ''} for ${tokenOut?.symbol || ''}`}
         </ActionButton>
         
         {error && (

@@ -423,4 +423,4 @@ export const MOCK_ETH_ABI = [
   }
 ] as const;
 
-export const MOCK_ETH_ADDRESS = "0xD86b97A8783c707bc5Db0280f632946488925A4c";
+export const MOCK_ETH_ADDRESS = "0xe49362642deB5126c2670aEA8D0B2D2f0a4c51a9";

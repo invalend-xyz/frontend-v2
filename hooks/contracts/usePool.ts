@@ -2,7 +2,7 @@
 
 import { useAccount, useReadContract } from "wagmi";
 import { CONTRACT_CONFIGS } from "@/lib/contracts/addresses";
-import { formatUSDC, formatAPY } from "@/lib/utils/formatters";
+import { formatUSDC, formatUSDCDisplay, formatAPY } from "@/lib/utils/formatters";
 
 export const usePool = () => {
   const { address } = useAccount();
@@ -37,16 +37,17 @@ export const usePool = () => {
 
   const formattedStats = {
     availableLiquidity: availableLiquidity
-      ? formatUSDC(availableLiquidity as bigint)
+      ? formatUSDCDisplay(availableLiquidity as bigint)
       : "0",
-    totalAllocated: totalAllocated ? formatUSDC(totalAllocated as bigint) : "0",
+    totalAllocated: totalAllocated ? formatUSDCDisplay(totalAllocated as bigint) : "0",
     apy: apy ? formatAPY(apy as bigint) : "0",
   };
 
+  // User info - display formatted values with commas
   const formattedUserInfo = userInfo
     ? {
-        shares: formatUSDC(userInfo[0] as bigint),
-        assetValue: formatUSDC(userInfo[1] as bigint),
+        shares: formatUSDCDisplay(userInfo[0] as bigint),
+        assetValue: formatUSDCDisplay(userInfo[1] as bigint),
       }
     : null;
 

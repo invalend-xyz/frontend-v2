@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount, useReadContract, useWatchContractEvent } from "wagmi";
 import { CONTRACT_CONFIGS } from "@/lib/contracts/addresses";
-import { formatUSDC } from "@/lib/utils/formatters";
+import { formatUSDCDisplay } from "@/lib/utils/formatters";
 
 export const ConnectWallet = () => {
   const { address, isConnected } = useAccount();
@@ -65,7 +65,7 @@ export const ConnectWallet = () => {
             style={{ fontFamily: "Space Grotesk" }}>
             {showLoading
               ? "Updating..."
-              : `${formatUSDC(usdcBalance || 0, 6)} USDC`}
+              : `${formatUSDCDisplay(usdcBalance || BigInt(0))} USDC`}
           </span>
         </div>
       )}

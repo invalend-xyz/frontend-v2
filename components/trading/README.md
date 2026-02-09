@@ -7,7 +7,7 @@ This directory contains the trading functionality for the Invalend DeFi protocol
 The trading system allows users to:
 
 - Create leveraged positions (up to 5x) using USDC as collateral
-- Trade various tokens including LSK (Lisk), ETH, WBTC, and UNI
+- Trade various tokens including ETH, USDC, and BTC
 - Execute swaps through their restricted wallets with enhanced security
 - Monitor positions and manage slippage tolerance
 
@@ -47,11 +47,9 @@ Custom hook that manages:
 
 ### Supported Tokens
 
-- **ETH**: Native Ethereum (18 decimals)
-- **USDC**: USD Coin - Primary collateral (6 decimals)
-- **WBTC**: Wrapped Bitcoin (8 decimals)
-- **LSK**: Lisk token (18 decimals) - _Newly added_
-- **UNI**: Aerodrome token (18 decimals)
+- **ETH**: Mock Ethereum (18 decimals)
+- **USDC**: Mock USD Coin - Primary collateral (6 decimals)
+- **BTC**: Mock Bitcoin (8 decimals)
 
 ### Trading Flow
 
@@ -70,11 +68,11 @@ Custom hook that manages:
 
 ## Configuration
 
-### Token Addresses (Lisk Sepolia)
+### Token Addresses (Base Sepolia)
 
-- USDC: `0xe61995e2728bd2d2b1abd9e089213b542db7916a` (actual deployed)
-- LSK: `0xac485391EB2d7D88253a7F1eF18C37f4242D1A24` (example - replace with actual)
-- Other tokens: Placeholder addresses (update with actual deployments)
+- USDC: `0x986Bcfa0E7fd97fF5b00cDA486956Fa400Ba6E0e` (MockUSDC)
+- ETH: `0xe49362642deB5126c2670aEA8D0B2D2f0a4c51a9` (MockETH)
+- BTC: `0x44A8761b68E0C8829D803fFeEad1b84303346B68` (MockBTC)
 
 ### Aerodrome Integration
 
@@ -133,7 +131,7 @@ The component handles various error states:
 
 This is a PoC (Proof of Concept) implementation focused on demonstrating the core functionality. For production use, consider:
 
-- Real token address deployments on Lisk
+- Real token address deployments on Base
 - Enhanced error handling and user feedback
 - Gas optimization
 - Comprehensive testing

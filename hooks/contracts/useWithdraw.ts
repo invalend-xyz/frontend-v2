@@ -5,7 +5,7 @@ import {
   useWriteContract,
   useWaitForTransactionReceipt,
 } from "wagmi";
-import { parseUSDC, formatUSDC } from "@/lib/utils/formatters";
+import { parseUSDC, formatUSDC, formatUSDCDisplay } from "@/lib/utils/formatters";
 import { CONTRACT_CONFIGS } from "@/lib/contracts/addresses";
 import { TransactionState } from "@/hooks/contracts/useLoan";
 
@@ -173,6 +173,7 @@ export const useWithdraw = () => {
     canWithdraw,
     restrictedWalletAddress,
     tokenBalance: tokenBalance ? formatUSDC(tokenBalance) : "0",
+    tokenBalanceDisplay: tokenBalance ? formatUSDCDisplay(tokenBalance) : "0",
     resetTransactionState,
   };
 };

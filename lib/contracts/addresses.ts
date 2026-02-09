@@ -1,18 +1,18 @@
 // Auto-generated contract configuration
-// Generated on: Mon Jan 6 2026
-// Network: Lisk Sepolia (4202)
+// Generated on: Sun Feb 9 2026
+// Network: Base Sepolia (84532)
 
 export const NETWORK_CONFIG = {
-  chainId: 4202,
-  name: "Lisk Sepolia",
-  rpcUrl: "https://rpc.sepolia-api.lisk.com",
-  explorerUrl: "https://sepolia-blockscout.lisk.com",
-  blockExplorerUrl: "https://sepolia-blockscout.lisk.com",
+  chainId: 84532,
+  name: "Base Sepolia",
+  rpcUrl: "https://sepolia.base.org",
+  explorerUrl: "https://sepolia.basescan.org",
+  blockExplorerUrl: "https://sepolia.basescan.org",
 } as const;
 
 // Supported chains configuration
 export const SUPPORTED_CHAINS = {
-  LISK_SEPOLIA: 4202,
+  BASE_SEPOLIA: 84532,
 } as const;
 
 // Import ABI files and their addresses

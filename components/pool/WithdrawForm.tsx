@@ -1,7 +1,7 @@
 "use client";
 
 import { usePoolWithdraw } from "@/hooks/contracts/usePoolWithdraw";
-import { parseUSDC } from "@/lib/utils/formatters";
+import { parseUSDC, formatTokenAmount } from "@/lib/utils/formatters";
 import { ActionButton } from "@/components/ui/TransactionButton";
 import { StatusCard, StatusItem } from "@/components/ui/StatusCard";
 import { AmountInput } from "@/components/ui/AmountInput";
@@ -21,8 +21,11 @@ export const WithdrawForm = () => {
     isWithdrawError,
     hasShares,
     userShares,
+    userSharesDisplay,
     userAssets,
+    userAssetsDisplay,
     availableLiquidity,
+    availableLiquidityDisplay,
     resetTransactionState,
     redeemHash,
   } = usePoolWithdraw();
@@ -83,28 +86,28 @@ export const WithdrawForm = () => {
           <p
             className="text-sm text-[#A3A3A3] font-normal"
             style={{ fontFamily: "Space Grotesk" }}>
-            Redeem your pool shares for USDC including accrued yield
+            Convert your pool shares back to USDC, including earned yield
           </p>
         </div>
 
-        {/* User Position Info */}
+        {/* Your Position */}
         {hasShares ? (
           <StatusCard
-            title="Your Pool Position"
+            title="Your Supply Position"
             className="border-green-500/20 bg-green-500/5">
             <StatusItem
-              label="Pool Shares"
-              value={`${userShares} Shares`}
+              label="Pool Shares Owned"
+              value={`${userSharesDisplay} Shares`}
               highlight={true}
             />
             <StatusItem
-              label="Asset Value"
-              value={`${userAssets} USDC`}
+              label="Withdrawable Value"
+              value={`${userAssetsDisplay} USDC`}
               highlight={true}
             />
             <StatusItem
-              label="Available Liquidity"
-              value={`${availableLiquidity} USDC`}
+              label="Pool Liquidity"
+              value={`${availableLiquidityDisplay} USDC`}
               highlight={false}
             />
           </StatusCard>
@@ -128,12 +131,12 @@ export const WithdrawForm = () => {
                 fontFamily: "Space Grotesk",
                 letterSpacing: "-0.5px",
               }}>
-              No Pool Shares
+              No Supply Position
             </h4>
             <p
               className="text-sm text-[#A3A3A3] font-normal"
               style={{ fontFamily: "Space Grotesk" }}>
-              Deposit USDC first to receive pool shares and start earning yield.
+              Supply USDC first to start earning 6% APY on your deposit.
             </p>
           </div>
         )}
@@ -144,23 +147,23 @@ export const WithdrawForm = () => {
             <label
               className="block text-sm font-normal text-white mb-2"
               style={{ fontFamily: "Space Grotesk" }}>
-              Shares to Redeem
+              Amount to Withdraw
             </label>
             <AmountInput
               value={amount}
               onChange={handleAmountChange}
               placeholder="0.00"
               maxValue={parseUSDC(userShares)}
-              maxLabel="Shares"
+              maxLabel="Available"
               error={validationError}
             />
             <div className="flex justify-between text-xs text-[#A3A3A3] mt-1">
-              <span>Your Shares: {userShares}</span>
+              <span>Available: {userShares} shares</span>
               <button
                 onClick={() => setAmount(userShares)}
                 className="text-[#06b6d4] hover:text-[#0891B2] transition-colors"
                 style={{ fontFamily: "Space Grotesk" }}>
-                Max
+                Withdraw All
               </button>
             </div>
           </div>
@@ -171,7 +174,7 @@ export const WithdrawForm = () => {
           <TransactionNotification
             hash={redeemHash}
             status="pending"
-            message="Redeeming shares..."
+            message="Withdrawing USDC..."
             autoHide={false}
           />
         )}
@@ -180,7 +183,7 @@ export const WithdrawForm = () => {
           <TransactionNotification
             hash={redeemHash}
             status="success"
-            message="Withdrawal successful! Your USDC has been returned."
+            message="Withdrawal complete! USDC sent to your wallet."
             onClose={handleReset}
           />
         )}

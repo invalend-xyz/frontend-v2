@@ -2,7 +2,7 @@
 
 import { useUserLoanInfo } from "@/hooks/contracts/useLoan";
 import {
-  formatUSDC,
+  formatTokenAmount,
   formatDate,
   formatRelativeTime,
 } from "@/lib/utils/formatters";
@@ -27,22 +27,22 @@ export const LoanStatusWidget = () => {
 
   return (
     <StatusCard
-      title="Your Loan Status"
+      title="Your Borrow Position"
       status={hasActiveLoan ? "active" : "inactive"}>
       {hasActiveLoan ? (
         <>
           <StatusItem
-            label="Loan Amount"
-            value={`${formatUSDC(loanInfo.loanAmount)} USDC`}
+            label="Amount Borrowed"
+            value={`${formatTokenAmount(loanInfo.loanAmount)} USDC`}
             highlight
           />
           <StatusItem
-            label="Collateral Deposited"
-            value={`${formatUSDC(loanInfo.marginAmount)} USDC`}
+            label="Your Collateral"
+            value={`${formatTokenAmount(loanInfo.marginAmount)} USDC`}
           />
           <StatusItem
-            label="Pool Funding"
-            value={`${formatUSDC(loanInfo.poolFunding)} USDC`}
+            label="Pool Leverage"
+            value={`${formatTokenAmount(loanInfo.poolFunding)} USDC`}
           />
           <StatusItem
             label="Loan Started"
@@ -80,9 +80,9 @@ export const LoanStatusWidget = () => {
               />
             </svg>
           </div>
-          <p className="text-sm text-gray-400">No active loan</p>
+          <p className="text-sm text-gray-400">No open position</p>
           <p className="text-xs text-gray-500 mt-1">
-            Create a loan to start trading
+            Borrow USDC to start trading with leverage
           </p>
         </div>
       )}

@@ -7,6 +7,7 @@ import { usePool } from "@/hooks/contracts/usePool";
 import { useWithdraw } from "@/hooks/contracts/useWithdraw";
 import { ActionButton } from "@/components/ui/TransactionButton";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
+import { formatTokenAmount, formatCompactUSD, formatNumberWithCommas } from "@/lib/utils/formatters";
 
 export const DashboardPage = () => {
   const { poolStats, userInfo, isLoading: isLoadingPool } = usePool();
@@ -27,7 +28,7 @@ export const DashboardPage = () => {
                 lineHeight: "1.1",
                 color: "#06b6d4",
               }}>
-              Welcome to Invalend
+              Dashboard
             </h1>
             <p
               className="text-[#A3A3A3] text-lg"
@@ -35,7 +36,7 @@ export const DashboardPage = () => {
                 fontFamily: "Space Grotesk",
                 lineHeight: "1.6",
               }}>
-              Your decentralized lending & trading platform
+              Monitor your positions, earnings, and protocol overview
             </p>
           </div>
           <div className="bg-[#06b6d4]/10 text-[#06b6d4] px-4 py-2 rounded-lg text-sm font-normal border border-[#06b6d4]/20">
@@ -43,13 +44,20 @@ export const DashboardPage = () => {
           </div>
         </div>
 
-        {/* Quick Stats */}
+        {/* Protocol Stats - Shows overall protocol health */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-[#1E1E1E] rounded-lg p-6 border border-cyan-500/15">
-            <div
-              className="text-[#A3A3A3] text-sm mb-2"
-              style={{ fontFamily: "Space Grotesk" }}>
-              Total Value Locked
+            <div className="flex items-center gap-1 mb-2">
+              <span
+                className="text-[#A3A3A3] text-sm"
+                style={{ fontFamily: "Space Grotesk" }}>
+                Total Value Locked
+              </span>
+              <span className="text-[#A3A3A3] cursor-help" title="Total assets deposited in the protocol">
+                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                </svg>
+              </span>
             </div>
             <div
               className="text-2xl font-normal mb-1"
@@ -65,10 +73,17 @@ export const DashboardPage = () => {
             </div>
           </div>
           <div className="bg-[#1E1E1E] rounded-lg p-6 border border-cyan-500/15">
-            <div
-              className="text-[#A3A3A3] text-sm mb-2"
-              style={{ fontFamily: "Space Grotesk" }}>
-              Active Loans
+            <div className="flex items-center gap-1 mb-2">
+              <span
+                className="text-[#A3A3A3] text-sm"
+                style={{ fontFamily: "Space Grotesk" }}>
+                Active Loans
+              </span>
+              <span className="text-[#A3A3A3] cursor-help" title="Number of open borrowing positions">
+                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                </svg>
+              </span>
             </div>
             <div
               className="text-2xl font-normal mb-1"
@@ -77,17 +92,24 @@ export const DashboardPage = () => {
                 letterSpacing: "-0.5px",
                 color: "#FFFFFF",
               }}>
-              156
+              {formatNumberWithCommas(156)}
             </div>
             <div className="text-[#06b6d4] text-xs font-normal">
               8 new today
             </div>
           </div>
           <div className="bg-[#1E1E1E] rounded-lg p-6 border border-cyan-500/30">
-            <div
-              className="text-[#A3A3A3] text-sm mb-2"
-              style={{ fontFamily: "Space Grotesk" }}>
-              Current APY
+            <div className="flex items-center gap-1 mb-2">
+              <span
+                className="text-[#A3A3A3] text-sm"
+                style={{ fontFamily: "Space Grotesk" }}>
+                Supply APY
+              </span>
+              <span className="text-[#A3A3A3] cursor-help" title="Annual percentage yield for lenders">
+                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                </svg>
+              </span>
             </div>
             <div
               className="text-2xl font-normal mb-1"
@@ -164,14 +186,17 @@ export const DashboardPage = () => {
                 letterSpacing: "-0.5px",
                 color: "#FFFFFF",
               }}>
-              Lending Position
+              Supply Position
             </h3>
+            <p className="text-[#A3A3A3] text-xs mb-4" style={{ fontFamily: "Space Grotesk" }}>
+              Your deposited assets earning yield
+            </p>
             <div className="space-y-4">
               <div className="bg-[#1E1E1E] rounded-lg p-6 border border-cyan-500/15">
                 <div
                   className="text-[#A3A3A3] text-sm mb-2"
                   style={{ fontFamily: "Space Grotesk" }}>
-                  USDC Deposited
+                  USDC Supplied
                 </div>
                 <div
                   className="text-xl font-normal mb-1"
@@ -183,11 +208,11 @@ export const DashboardPage = () => {
                   {isLoadingPool ? (
                     <LoadingSpinner size="sm" />
                   ) : (
-                    `$${userInfo?.shares || "0"}`
+                    userInfo?.shares || "0"
                   )}
                 </div>
                 <div className="text-[#A3A3A3] text-xs font-normal">
-                  Available for lending
+                  Your pool shares
                 </div>
               </div>
               <div className="bg-[#1E1E1E] rounded-lg p-6 border border-cyan-500/15">
@@ -210,7 +235,7 @@ export const DashboardPage = () => {
                   )}
                 </div>
                 <div className="text-[#A3A3A3] text-xs font-normal">
-                  Current value with earnings
+                  Including accrued yield
                 </div>
               </div>
               <div className="bg-[#1E1E1E] rounded-lg p-6 border border-cyan-500/30">
@@ -233,7 +258,7 @@ export const DashboardPage = () => {
                   )}
                 </div>
                 <div className="text-[#06b6d4]/70 text-xs font-normal">
-                  Annual yield
+                  Earning rate
                 </div>
               </div>
 
@@ -247,7 +272,7 @@ export const DashboardPage = () => {
                       letterSpacing: "-0.5px",
                       color: "#FFFFFF",
                     }}>
-                    Withdraw Funds
+                    Withdraw to Wallet
                   </h4>
                   <div className="space-y-4">
                     <div className="bg-[#1E1E1E] rounded-lg p-4 border border-cyan-500/15">
@@ -268,7 +293,7 @@ export const DashboardPage = () => {
                       <div
                         className="text-xs text-[#A3A3A3] font-normal mt-1"
                         style={{ fontFamily: "Space Grotesk" }}>
-                        After loan repayment
+                        Ready to withdraw
                       </div>
                     </div>
                     <ActionButton
@@ -287,7 +312,7 @@ export const DashboardPage = () => {
                       variant="secondary"
                       size="sm"
                       className="w-full">
-                      {isWithdrawing ? "Withdrawing..." : "Withdraw All"}
+                      {isWithdrawing ? "Withdrawing USDC..." : "Withdraw USDC"}
                     </ActionButton>
                   </div>
                 </div>
@@ -304,14 +329,17 @@ export const DashboardPage = () => {
                 letterSpacing: "-0.5px",
                 color: "#FFFFFF",
               }}>
-              Trading Position
+              Borrow Position
             </h3>
+            <p className="text-[#A3A3A3] text-xs mb-4" style={{ fontFamily: "Space Grotesk" }}>
+              Your leveraged trading position
+            </p>
             <div className="space-y-4">
               <div className="bg-[#1E1E1E] rounded-lg p-6 border border-cyan-500/15">
                 <div
                   className="text-[#A3A3A3] text-sm mb-2"
                   style={{ fontFamily: "Space Grotesk" }}>
-                  Active Loan
+                  Borrowed
                 </div>
                 <div
                   className="text-xl font-normal mb-1"
@@ -323,7 +351,7 @@ export const DashboardPage = () => {
                   $12,500
                 </div>
                 <div className="text-[#A3A3A3] text-xs font-normal">
-                  Borrowed for trading
+                  Outstanding debt
                 </div>
               </div>
               <div className="bg-[#1E1E1E] rounded-lg p-6 border border-cyan-500/15">
@@ -342,7 +370,7 @@ export const DashboardPage = () => {
                   $2,500
                 </div>
                 <div className="text-[#A3A3A3] text-xs font-normal">
-                  Margin requirement
+                  Securing your loan
                 </div>
               </div>
               <div className="bg-[#1E1E1E] rounded-lg p-6 border border-cyan-500/30">
@@ -358,10 +386,10 @@ export const DashboardPage = () => {
                     letterSpacing: "-0.5px",
                     color: "#06b6d4",
                   }}>
-                  +$387
+                  +$387.00
                 </div>
                 <div className="text-[#06b6d4]/70 text-xs font-normal">
-                  Unrealized gains
+                  Unrealized profit
                 </div>
               </div>
             </div>

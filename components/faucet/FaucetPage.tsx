@@ -3,7 +3,7 @@
 import { useFaucet } from "@/hooks/contracts/useFaucet";
 import { ActionButton } from "@/components/ui/TransactionButton";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
-import { formatUSDC } from "@/lib/utils/formatters";
+import { formatTokenAmount } from "@/lib/utils/formatters";
 
 export const FaucetPage = () => {
   const { usdcBalance, isMinting, isBusy, handleMint, hasUpdatedBalance } =
@@ -21,7 +21,7 @@ export const FaucetPage = () => {
               letterSpacing: "-0.5px",
               lineHeight: "1.2",
             }}>
-            MockUSDC Faucet
+            Testnet Faucet
           </h1>
           <p
             className="text-[#A3A3A3] max-w-2xl mx-auto text-lg"
@@ -29,9 +29,8 @@ export const FaucetPage = () => {
               fontFamily: "Space Grotesk",
               lineHeight: "1.6",
             }}>
-            Get test USDC tokens for the Invalend protocol. This faucet allows
-            you to mint 1000 USDC tokens for testing purposes on Lisk Sepolia
-            testnet.
+            Get free test USDC to try out the protocol. Mint 1,000 USDC tokens
+            instantly on Base Sepolia testnet.
           </p>
         </div>
 
@@ -45,7 +44,7 @@ export const FaucetPage = () => {
                 letterSpacing: "-0.5px",
                 lineHeight: "1.2",
               }}>
-              Your USDC Balance
+              Wallet Balance
             </h3>
             <div
               className="text-3xl font-normal text-[#06b6d4]"
@@ -53,12 +52,12 @@ export const FaucetPage = () => {
                 fontFamily: "Space Grotesk",
                 letterSpacing: "-1px",
               }}>
-              {usdcBalance ? formatUSDC(usdcBalance) : "0.00"} USDC
+              {usdcBalance ? formatTokenAmount(usdcBalance, 6, 2) : "0.00"} USDC
             </div>
             <p
               className="text-sm text-[#A3A3A3] font-normal"
               style={{ fontFamily: "Space Grotesk" }}>
-              Available for deposits and testing
+              Ready to use in the protocol
             </p>
           </div>
         </div>
@@ -74,12 +73,12 @@ export const FaucetPage = () => {
                   letterSpacing: "-0.5px",
                   lineHeight: "1.2",
                 }}>
-                Mint Test USDC
+                Get Test USDC
               </h3>
               <p
                 className="text-sm text-[#A3A3A3] font-normal"
                 style={{ fontFamily: "Space Grotesk" }}>
-                Get 1000 USDC tokens for testing the protocol
+                Click below to receive 1,000 test USDC tokens
               </p>
             </div>
 
@@ -124,7 +123,7 @@ export const FaucetPage = () => {
                 loading={isBusy}
                 size="lg"
                 className="px-8">
-                {isBusy ? "Minting..." : "Mint 1000 USDC"}
+                {isBusy ? "Sending USDC..." : "Get 1,000 USDC"}
               </ActionButton>
             </div>
 
@@ -133,15 +132,15 @@ export const FaucetPage = () => {
               <h4
                 className="text-sm font-normal text-white mb-3"
                 style={{ fontFamily: "Space Grotesk" }}>
-                Faucet Information
+                About the Faucet
               </h4>
               <div
                 className="text-xs text-[#A3A3A3] space-y-2 font-normal"
                 style={{ fontFamily: "Space Grotesk" }}>
-                <p>• Mint 1000 USDC tokens per transaction</p>
-                <p>• Tokens are for testing purposes only</p>
-                <p>• No real value - Lisk Sepolia testnet</p>
-                <p>• Use these tokens to test deposits and withdrawals</p>
+                <p>• Receive 1,000 test USDC per request</p>
+                <p>• Tokens have no real value (testnet only)</p>
+                <p>• Use them to try Supply, Borrow, and Swap features</p>
+                <p>• Request more anytime you need</p>
               </div>
             </div>
           </div>
@@ -152,7 +151,7 @@ export const FaucetPage = () => {
           <p
             className="text-sm text-[#A3A3A3] font-normal"
             style={{ fontFamily: "Space Grotesk" }}>
-            <span className="text-[#06b6d4] font-normal">Network:</span> Lisk
+            <span className="text-[#06b6d4] font-normal">Network:</span> Base
             Sepolia Testnet
           </p>
           <p

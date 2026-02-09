@@ -35,28 +35,28 @@ export const PoolStats = () => {
 
   const stats = [
     {
-      label: "Total Deposits",
+      label: "Total Supplied",
       value: poolStats.totalAllocated,
       unit: "USDC",
-      description: "Total USDC deposited in pool",
+      description: "Total USDC supplied by lenders",
     },
     {
-      label: "Available Liquidity",
+      label: "Available to Borrow",
       value: poolStats.availableLiquidity,
       unit: "USDC",
-      description: "Available for new loans",
+      description: "Liquidity available for new loans",
     },
     {
-      label: "Total Allocated",
+      label: "Currently Borrowed",
       value: poolStats.totalAllocated,
       unit: "USDC",
-      description: "Currently allocated to loans",
+      description: "USDC lent out to borrowers",
     },
     {
-      label: "APY",
+      label: "Supply APY",
       value: poolStats.apy,
       unit: "",
-      description: "Fixed annual yield rate",
+      description: "Fixed annual yield for suppliers",
       highlight: true,
     },
   ];
@@ -67,8 +67,8 @@ export const PoolStats = () => {
       <p
         className="text-[#A3A3A3] text-sm mb-4 font-normal"
         style={{ fontFamily: "Space Grotesk" }}>
-        Deposit USDC to earn fixed 6% APY and provide liquidity for leverage
-        loans
+        Supply USDC to earn a fixed 6% APY. Your funds provide liquidity for
+        borrowers seeking leverage.
       </p>
 
       {/* Stats Grid */}
@@ -126,14 +126,14 @@ export const PoolStats = () => {
                 fontFamily: "Space Grotesk",
                 letterSpacing: "-0.5px",
               }}>
-              Pool Status
+              Pool Health
             </h3>
             <p
               className="text-sm text-[#A3A3A3] font-normal"
               style={{ fontFamily: "Space Grotesk" }}>
               {Number(poolStats.availableLiquidity) > 0
-                ? "Pool is accepting deposits and funding loans"
-                : "Pool is at capacity"}
+                ? "Pool is healthy and accepting new supplies and loans"
+                : "Pool is at capacity - withdrawals may be limited"}
             </p>
           </div>
           <div

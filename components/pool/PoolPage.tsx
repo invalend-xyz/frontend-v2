@@ -22,7 +22,7 @@ export const PoolPage = () => {
                 }`}
                 onClick={() => setActiveTab("deposit")}
                 style={{ fontFamily: "Space Grotesk" }}>
-                Deposit
+                Supply
               </button>
               <button
                 className={`flex-1 py-4 text-center font-normal text-sm transition-colors rounded-tr-lg ${

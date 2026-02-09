@@ -1,4 +1,4 @@
-// Trading constants and token configurations for Lisk Sepolia network
+// Trading constants and token configurations for Base Sepolia network
 import { CONTRACT_CONFIGS } from "@/lib/contracts/addresses";
 
 export interface Token {
@@ -11,7 +11,7 @@ export interface Token {
   isNative?: boolean;
 }
 
-// Lisk Sepolia Token Addresses (imported from contracts.ts)
+// Base Sepolia Token Addresses (imported from contracts.ts)
 // Only deployed tokens: Mock USDC, Mock ETH, Mock BTC
 export const TOKENS: Record<string, Token> = {
   USDC: {

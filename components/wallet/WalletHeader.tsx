@@ -16,12 +16,15 @@ export const WalletHeader: React.FC<WalletHeaderProps> = ({ address, isActive })
                         fontFamily: "Space Grotesk",
                         letterSpacing: "-0.5px",
                     }}>
-                    Restricted Wallet
+                    Trading Wallet
                 </h1>
+                <p className="text-sm text-[#A3A3A3] mb-2" style={{ fontFamily: "Space Grotesk" }}>
+                    Manage assets in your leveraged trading wallet
+                </p>
                 <div className="flex items-center gap-2 text-sm text-[#A3A3A3]" style={{ fontFamily: "Space Grotesk" }}>
                     <span>Address:</span>
                     <ExplorerLink address={address} showIcon={true} className="text-[#06b6d4] hover:text-[#06b6d4]/80">
-                         {address}
+                         {address.slice(0, 10)}...{address.slice(-8)}
                     </ExplorerLink>
                 </div>
             </div>
@@ -31,7 +34,7 @@ export const WalletHeader: React.FC<WalletHeaderProps> = ({ address, isActive })
                 ? "bg-cyan-400/10 border-cyan-400/30 text-cyan-400"
                 : "bg-green-500/10 border-green-500/30 text-green-500"
             }`} style={{ fontFamily: "Space Grotesk" }}>
-                {isActive ? "Active Loan • Limited Withdrawals" : "No Active Loan • Unrestricted"}
+                {isActive ? "Position Open • Some Assets Reserved" : "No Position • Full Access"}
             </div>
         </div>
     );

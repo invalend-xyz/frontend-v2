@@ -8,7 +8,7 @@ import {
   useWaitForTransactionReceipt,
 } from "wagmi";
 import { CONTRACT_CONFIGS } from "@/lib/contracts/addresses";
-import { parseUSDC, formatUSDC } from "@/lib/utils/formatters";
+import { parseUSDC, formatUSDC, formatUSDCDisplay } from "@/lib/utils/formatters";
 
 /**
  * Hook for handling Lender withdrawals from the LendingPool
@@ -112,9 +112,14 @@ export const usePoolWithdraw = () => {
     isWithdrawError,
     hasShares,
     userShares: formatUSDC(userShares),
+    userSharesDisplay: formatUSDCDisplay(userShares),
     userAssets: formatUSDC(userAssets),
+    userAssetsDisplay: formatUSDCDisplay(userAssets),
     availableLiquidity: availableLiquidity
       ? formatUSDC(availableLiquidity)
+      : "0",
+    availableLiquidityDisplay: availableLiquidity
+      ? formatUSDCDisplay(availableLiquidity)
       : "0",
     resetTransactionState,
     refetchUserInfo,

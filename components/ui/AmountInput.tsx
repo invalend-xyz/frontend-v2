@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { formatUSDC } from "@/lib/utils/formatters";
+import { formatTokenAmount } from "@/lib/utils/formatters";
+import { formatUnits } from "viem";
 
 interface AmountInputProps {
   value: string;
@@ -52,7 +53,7 @@ export const AmountInput = ({
 
   const handleMaxClick = () => {
     if (maxValue && !disabled) {
-      const maxFormatted = formatUSDC(maxValue);
+      const maxFormatted = formatUnits(maxValue, 6);
       onChange(maxFormatted);
     }
   };
@@ -87,7 +88,7 @@ export const AmountInput = ({
             disabled={disabled}
             className="text-sm text-[#06b6d4] hover:text-[#06b6d4]/80 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-normal"
             style={{ fontFamily: "Space Grotesk" }}>
-            {maxLabel}: {formatUSDC(maxValue)} USDC
+            {maxLabel}: {formatTokenAmount(maxValue, 6, 2)} USDC
           </button>
         )}
       </div>

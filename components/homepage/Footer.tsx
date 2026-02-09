@@ -13,19 +13,19 @@ export default function Footer() {
     ],
     resources: [
       {
-        href: "https://invalend-docs-lisk.vercel.app/",
+        href: "https://invalend-docs.vercel.app/",
         label: "Documentation",
       },
       {
-        href: "https://invalend-docs-lisk.vercel.app/docs/introduction/overview",
+        href: "https://invalend-docs.vercel.app/docs/introduction/overview",
         label: "Overview",
       },
       {
-        href: "https://invalend-docs-lisk.vercel.app/docs/core-concepts/core-principles/how-it-works",
+        href: "https://invalend-docs.vercel.app/docs/core-concepts/core-principles/how-it-works",
         label: "Core Concepts",
       },
       {
-        href: "https://invalend-docs-lisk.vercel.app/docs/technical-details/smart-contract-architecture/core-contracts",
+        href: "https://invalend-docs.vercel.app/docs/technical-details/smart-contract-architecture/core-contracts",
         label: "Smart Contracts",
       },
     ],
@@ -177,7 +177,7 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-2 px-4 py-2 bg-tertiary border border-subtle rounded-md text-xs text-secondary">
             <div className="w-4 h-4 bg-accent rounded-sm"></div>
-            <span>Powered by Lisk</span>
+            <span>Powered by Base</span>
           </div>
         </div>
       </div>

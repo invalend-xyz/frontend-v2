@@ -58,13 +58,21 @@ export function calculateMaxAmountIn(
 }
 
 /**
- * Calculate USD value of a token amount
+ * Calculate USD value of a token amount with proper formatting
  */
 export function calculateUSDValue(amount: string, token: Token): string {
   if (!amount || !token?.price) return "0.00";
 
   const price = parseFloat(token.price.replace(/,/g, ""));
   const value = parseFloat(amount) * price;
+
+  // Format with commas for larger values
+  if (value >= 1000) {
+    return value.toLocaleString("en-US", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+  }
 
   return value.toFixed(2);
 }
@@ -127,7 +135,7 @@ export function hasSufficientBalance(
 }
 
 /**
- * Format token amount for display
+ * Format token amount for display with proper number formatting
  */
 export function formatTokenAmount(
   amount: bigint | string,
@@ -147,6 +155,14 @@ export function formatTokenAmount(
   // For very small amounts, show more decimals
   if (num < 0.001 && num > 0) {
     return num.toFixed(8);
+  }
+
+  // For larger amounts, use locale formatting with commas
+  if (num >= 1000) {
+    return num.toLocaleString("en-US", {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: Math.min(maxDecimals, 2),
+    });
   }
 
   // For regular amounts, limit decimals

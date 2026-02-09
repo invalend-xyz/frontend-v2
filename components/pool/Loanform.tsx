@@ -3,7 +3,7 @@ import {
   useUserLoanInfo,
   useRepayLoan,
 } from "@/hooks/contracts/useLoan";
-import { formatUSDC, formatRelativeTime } from "@/lib/utils/formatters";
+import { formatTokenAmount, formatRelativeTime } from "@/lib/utils/formatters";
 import { ApproveActionButton, ActionButton } from "@/components/ui/TransactionButton";
 import { StatusCard, StatusItem } from "@/components/ui/StatusCard";
 import { AmountInput } from "@/components/ui/AmountInput";
@@ -59,27 +59,27 @@ export const BorrowForm = () => {
           <p
             className="text-sm text-[#A3A3A3] font-normal"
             style={{ fontFamily: "Space Grotesk" }}>
-            Borrow USDC with collateral. Monitor your loan and repay anytime.
+            Open a leveraged position by depositing collateral to borrow USDC
           </p>
         </div>
 
         {/* Current Loan Status */}
         {loanInfo && (
           <StatusCard
-            title="Current Loan"
+            title="Active Loan"
             status={loanInfo.isActive ? "active" : "inactive"}>
             <StatusItem
-              label="Loan Amount"
-              value={`${formatUSDC(loanInfo.loanAmount)} USDC`}
+              label="Amount Borrowed"
+              value={`${formatTokenAmount(loanInfo.loanAmount)} USDC`}
               highlight={loanInfo.isActive}
             />
             <StatusItem
-              label="Collateral"
-              value={`${formatUSDC(loanInfo.marginAmount)} USDC`}
+              label="Your Collateral"
+              value={`${formatTokenAmount(loanInfo.marginAmount)} USDC`}
             />
             <StatusItem
-              label="Pool Funding"
-              value={`${formatUSDC(loanInfo.poolFunding)} USDC`}
+              label="Pool Contribution"
+              value={`${formatTokenAmount(loanInfo.poolFunding)} USDC`}
             />
             <StatusItem
               label="Started"
@@ -87,7 +87,7 @@ export const BorrowForm = () => {
             />
             {loanInfo.restrictedWallet && (
               <StatusItem
-                label="Restricted Wallet"
+                label="Trading Wallet"
                 value={
                   <ExplorerLink
                     address={loanInfo.restrictedWallet}
@@ -104,9 +104,9 @@ export const BorrowForm = () => {
         <AmountInput
           value={amount}
           onChange={handleAmountChange}
-          label="Loan Amount"
+          label="Amount to Borrow"
           maxValue={usdcBalance}
-          maxLabel="Balance"
+          maxLabel="Wallet Balance"
           disabled={isApproving || isCreatingLoan}
           error={validationError}
         />
@@ -115,19 +115,19 @@ export const BorrowForm = () => {
         {(requiredCollateral || poolFunding) && (
           <div className="bg-dark-gray rounded-lg p-4 space-y-2">
             <h4 className="text-sm font-medium text-gray-300 mb-2">
-              Loan Requirements
+              What You&apos;ll Need
             </h4>
             {requiredCollateral && (
               <StatusItem
-                label="Required Collateral"
-                value={`${formatUSDC(requiredCollateral)} USDC`}
+                label="Collateral Required"
+                value={`${formatTokenAmount(requiredCollateral)} USDC`}
                 highlight
               />
             )}
             {poolFunding && (
               <StatusItem
-                label="Pool Funding Needed"
-                value={`${formatUSDC(poolFunding)} USDC`}
+                label="Leverage from Pool"
+                value={`${formatTokenAmount(poolFunding)} USDC`}
               />
             )}
           </div>
@@ -199,9 +199,9 @@ export const BorrowForm = () => {
           onExecute={handleCreateLoan}
           approveLabel="Approve USDC"
           approvingLabel="Approving USDC..."
-          executeLabel="Create Loan"
-          executingLabel="Creating Loan..."
-          successLabel="Loan Created!"
+          executeLabel="Borrow USDC"
+          executingLabel="Opening Position..."
+          successLabel="Position Opened!"
           disabled={!isValidAmount || currentStep === "success"}
           size="lg"
           className="w-full"
@@ -241,27 +241,27 @@ export const RepayForm = () => {
           <p
             className="text-sm text-[#A3A3A3] font-normal"
             style={{ fontFamily: "Space Grotesk" }}>
-            Repay your active loan to unlock your collateral.
+            Close your position and withdraw your collateral
           </p>
         </div>
 
         {/* Current Loan Status */}
         {loanInfo && (
           <StatusCard
-            title="Loan to Repay"
+            title="Outstanding Debt"
             status={loanInfo.isActive ? "active" : "inactive"}>
             <StatusItem
-              label="Loan Amount"
-              value={`${formatUSDC(loanInfo.loanAmount)} USDC`}
+              label="Amount Owed"
+              value={`${formatTokenAmount(loanInfo.loanAmount)} USDC`}
               highlight={loanInfo.isActive}
             />
             <StatusItem
-              label="Collateral"
-              value={`${formatUSDC(loanInfo.marginAmount)} USDC`}
+              label="Your Collateral"
+              value={`${formatTokenAmount(loanInfo.marginAmount)} USDC`}
             />
             <StatusItem
-              label="Pool Funding"
-              value={`${formatUSDC(loanInfo.poolFunding)} USDC`}
+              label="Pool Contribution"
+              value={`${formatTokenAmount(loanInfo.poolFunding)} USDC`}
             />
             <StatusItem
               label="Started"
@@ -269,7 +269,7 @@ export const RepayForm = () => {
             />
             {loanInfo.restrictedWallet && (
               <StatusItem
-                label="Restricted Wallet"
+                label="Trading Wallet"
                 value={
                   <ExplorerLink
                     address={loanInfo.restrictedWallet}
@@ -303,12 +303,12 @@ export const RepayForm = () => {
                 fontFamily: "Space Grotesk",
                 letterSpacing: "-0.5px",
               }}>
-              No Active Loan
+              No Open Position
             </h4>
             <p
               className="text-sm text-[#A3A3A3] font-normal"
               style={{ fontFamily: "Space Grotesk" }}>
-              You don&apos;t have any active loans to repay at the moment.
+              You don&apos;t have any active loans to repay.
             </p>
           </div>
         )}
@@ -318,7 +318,7 @@ export const RepayForm = () => {
           <TransactionNotification
             hash={repayTx.hash}
             status="pending"
-            message="Repaying loan..."
+            message="Closing position..."
             autoHide={false}
           />
         )}
@@ -327,7 +327,7 @@ export const RepayForm = () => {
           <TransactionNotification
             hash={repayTx.hash}
             status="success"
-            message="Loan repaid successfully!"
+            message="Position closed! Collateral returned to your wallet."
             onClose={() => {
               resetTransactionState();
               refetchLoanInfo();
@@ -352,12 +352,12 @@ export const RepayForm = () => {
           className="w-full"
           variant={activeLoan ? "primary" : "secondary"}>
           {currentStep === "repay" && isRepaying
-            ? "Repaying Loan..."
+            ? "Closing Position..."
             : currentStep === "success"
-            ? "Repay Successful!"
+            ? "Position Closed!"
             : activeLoan
-            ? "Repay Loan"
-            : "No Loan to Repay"}
+            ? "Repay & Close Position"
+            : "No Position to Close"}
         </ActionButton>
       </div>
     </div>

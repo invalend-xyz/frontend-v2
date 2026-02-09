@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { formatUnits } from "viem";
 import { useRestrictedWallet } from "@/hooks/contracts/useRestrictedWallet";
 import { TransactionNotification } from "@/components/ui/TransactionNotification";
+import { formatUSDCDisplay } from "@/lib/utils/formatters";
 import { COMMON_TOKENS } from "./tokens";
 import { WalletHeader } from "./WalletHeader";
 import { WalletStatCard } from "./WalletStatCard";
@@ -92,10 +93,10 @@ export const RestrictedWalletPage: React.FC = () => {
     return (
       <div className="max-w-4xl mx-auto py-12 text-center">
          <h2 className="text-2xl font-normal text-white mb-2" style={{ fontFamily: "Space Grotesk" }}>
-           No Restricted Wallet Found
+           No Trading Wallet
          </h2>
          <p className="text-[#A3A3A3] font-normal" style={{ fontFamily: "Space Grotesk" }}>
-           You must initialize a loan to create a restricted wallet.
+           Open a borrow position first to create your trading wallet.
          </p>
       </div>
     );
@@ -122,25 +123,25 @@ export const RestrictedWalletPage: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <WalletStatCard
-            label="Withdrawable USDC"
-            value={`${formatUnits(withdrawableUSDC, COMMON_TOKENS[0].decimals)} USDC`}
-            subValue={loanIsActive ? "Limited by collateral" : "Fully available"}
+            label="Available to Withdraw"
+            value={`${formatUSDCDisplay(withdrawableUSDC)} USDC`}
+            subValue={loanIsActive ? "Collateral reserved" : "Full balance available"}
         />
         <WalletStatCard
-            label="Active Assets"
+            label="Tokens Held"
             value={activeTokenCount.toString()}
-            subValue="Tokens with balance"
+            subValue="Assets with balance"
         />
         <WalletStatCard
-            label="Total Supported"
+            label="Supported Assets"
             value={COMMON_TOKENS.length}
-            subValue="Tradable tokens"
+            subValue="Available for trading"
         />
       </div>
 
       <div className="space-y-4">
         <h3 className="text-xl font-normal text-white" style={{ fontFamily: "Space Grotesk" }}>
-            Asset Management
+            Your Assets
         </h3>
         <TokenListTable
             tokens={tokenBalances}
@@ -169,9 +170,9 @@ export const RestrictedWalletPage: React.FC = () => {
           hash={withdrawTx.hash}
           message={
             withdrawTx.status === "success"
-              ? "Withdrawal successful"
+              ? "Tokens sent to your wallet"
               : withdrawTx.status === "pending"
-              ? "Withdrawing..."
+              ? "Sending to wallet..."
               : withdrawTx.error || "Withdrawal failed"
           }
           onClose={resetTransactionState}

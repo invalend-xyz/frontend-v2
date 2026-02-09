@@ -87,7 +87,7 @@ export const SwapInput: React.FC<SwapInputProps> = ({
 
       <div className="flex justify-between items-center mt-3"> 
           <div className="text-xs text-[#A3A3A3]">
-              ≈ ${usdValue || "0.00"}
+              ≈ ${usdValue || "0.00"} USD
           </div>
           {onMax && !readOnly && balance !== undefined && (
               <button 

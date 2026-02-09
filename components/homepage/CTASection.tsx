@@ -8,7 +8,7 @@ export default function CTASection() {
   const { ref, isVisible } = useScrollAnimation();
 
   const features = [
-    "Live on Lisk Sepolia",
+    "Live on Base Sepolia",
     "Open Source",
     "Community Governed",
   ];
@@ -46,7 +46,7 @@ export default function CTASection() {
               Launch App
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <a href="https://invalend-docs-lisk.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn-secondary btn-lg">
+            <a href="https://invalend-docs.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn-secondary btn-lg">
               Read Documentation
               <BookOpen className="w-5 h-5" />
             </a>

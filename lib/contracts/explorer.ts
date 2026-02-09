@@ -6,9 +6,9 @@ type SupportedChainId =
 
 // Blockchain explorer configurations
 export const EXPLORER_CONFIGS = {
-  [SUPPORTED_CHAINS.LISK_SEPOLIA]: {
-    name: "Lisk Sepolia Blockscout",
-    baseUrl: "https://sepolia-blockscout.lisk.com",
+  [SUPPORTED_CHAINS.BASE_SEPOLIA]: {
+    name: "BaseScan Sepolia",
+    baseUrl: "https://sepolia.basescan.org",
     txPath: "/tx",
     addressPath: "/address",
     tokenPath: "/token",
@@ -27,7 +27,7 @@ export const EXPLORER_CONFIGS = {
 // Get explorer URL for transaction
 export const getTransactionUrl = (
   hash: string,
-  chainId: SupportedChainId = SUPPORTED_CHAINS.LISK_SEPOLIA
+  chainId: SupportedChainId = SUPPORTED_CHAINS.BASE_SEPOLIA
 ): string => {
   const config = EXPLORER_CONFIGS[chainId];
   if (!config) return "";
@@ -37,7 +37,7 @@ export const getTransactionUrl = (
 // Get explorer URL for address
 export const getAddressUrl = (
   address: string,
-  chainId: SupportedChainId = SUPPORTED_CHAINS.LISK_SEPOLIA
+  chainId: SupportedChainId = SUPPORTED_CHAINS.BASE_SEPOLIA
 ): string => {
   const config = EXPLORER_CONFIGS[chainId];
   if (!config) return "";
@@ -47,7 +47,7 @@ export const getAddressUrl = (
 // Get explorer URL for token
 export const getTokenUrl = (
   address: string,
-  chainId: SupportedChainId = SUPPORTED_CHAINS.LISK_SEPOLIA
+  chainId: SupportedChainId = SUPPORTED_CHAINS.BASE_SEPOLIA
 ): string => {
   const config = EXPLORER_CONFIGS[chainId];
   if (!config) return "";
@@ -56,7 +56,7 @@ export const getTokenUrl = (
 
 // Get explorer config
 export const getExplorerConfig = (
-  chainId: SupportedChainId = SUPPORTED_CHAINS.LISK_SEPOLIA
+  chainId: SupportedChainId = SUPPORTED_CHAINS.BASE_SEPOLIA
 ) => {
   return EXPLORER_CONFIGS[chainId];
 };

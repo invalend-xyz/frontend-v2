@@ -46,7 +46,7 @@ export interface UseTransactionButtonProps {
   spenderAddress?: `0x${string}`;
   /** Amount in wei */
   amount?: bigint;
-  /** Expected chain ID (Lisk Sepolia = 4202) */
+  /** Expected chain ID (Base Sepolia = 84532) */
   expectedChainId?: number;
   /** Whether approval step is required */
   requiresApproval?: boolean;
@@ -87,8 +87,8 @@ const ERC20_ABI = [
   },
 ] as const;
 
-// Default Lisk Sepolia chain ID
-const DEFAULT_CHAIN_ID = 4202;
+// Default Base Sepolia chain ID
+const DEFAULT_CHAIN_ID = 84532;
 
 // ============================================================================
 // MAIN HOOK
