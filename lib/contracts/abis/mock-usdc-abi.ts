@@ -349,4 +349,4 @@ export const MOCK_USDC_ABI = [
   }
 ] as const;
 
-export const MOCK_USDC_ADDRESS = "0x986Bcfa0E7fd97fF5b00cDA486956Fa400Ba6E0e";
+export const MOCK_USDC_ADDRESS = "0x98366dFa61b21Da9e0103929F3Dc8bBF40341253";

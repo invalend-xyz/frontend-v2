@@ -423,4 +423,4 @@ export const MOCK_BTC_ABI = [
   }
 ] as const;
 
-export const MOCK_BTC_ADDRESS = "0x44A8761b68E0C8829D803fFeEad1b84303346B68";
+export const MOCK_BTC_ADDRESS = "0x629d5B270Bb57b2bb6092fB9B0803EE60EbB9dA3";

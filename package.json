@@ -26,8 +26,14 @@
     "next": "16.0.8",
     "react": "19.2.1",
     "react-dom": "19.2.1",
-    "viem": "^2.41.2",
-    "wagmi": "^3.1.0"
+    "viem": "2.47.2",
+    "wagmi": "^3.1.0",
+    "zustand": "^5.0.11"
+  },
+  "pnpm": {
+    "overrides": {
+      "viem": "2.47.2"
+    }
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
