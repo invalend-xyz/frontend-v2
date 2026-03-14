@@ -12,6 +12,10 @@ section[id] {
 
 /* Design tokens per INVALEND_HOMEPAGE.md (Light & Airy Minimalism with Dark Theme - Cyan Accent) */
 :root {
+  /* Layout heights — update here if banner or navbar height changes */
+  --banner-height: 42px;
+  --navbar-height: 64px;
+
   /* Backgrounds */
   --bg-primary: #0a0a0a; /* Main canvas */
   --bg-secondary: #141414; /* Cards, panels */

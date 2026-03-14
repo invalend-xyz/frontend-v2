@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import { Provider } from "@/app/provider";
 import { Analytics } from "@vercel/analytics/next";
+import { DemoBanner } from "@/components/DemoBanner";
 
 import "./globals.css";
 
@@ -32,6 +33,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${spaceGrotesk.variable} antialiased bg-primary text-primary`}>
+        <DemoBanner />
         <Analytics />
         <Provider>{children}</Provider>
       </body>

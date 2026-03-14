@@ -33,7 +33,8 @@ export default function Navbar() {
       </a>
 
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ease-in-out ${
+        style={{ top: 'var(--banner-height)' }}
+        className={`fixed left-0 right-0 z-[999] transition-all duration-400 ease-in-out ${
           isScrolled ? "px-6 pt-4" : "px-0 pt-0"
         }`}
         role="navigation"

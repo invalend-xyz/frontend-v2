@@ -30,7 +30,8 @@ export default function AppNavbar() {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0A] border-b border-cyan-500/15"
+        style={{ top: 'var(--banner-height)' }}
+        className="fixed left-0 right-0 z-[999] bg-[#0A0A0A] border-b border-cyan-500/15"
         role="navigation"
         aria-label="Application navigation">
         <div className="px-6 sm:px-8 lg:px-12">
